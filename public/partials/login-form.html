@@ -9,6 +9,8 @@
   </fieldset>
 </form>
 
+<!-- FOR TESTING ONLY -->
+
 <p>Logged in username: {{loginCtrl.user.username}}</p>
 <p>Logged in display: {{loginCtrl.user.display}}</p>
 
@@ -19,3 +21,5 @@
 <div ng-repeat="user in loginCtrl.users">
 <h2>{{user.display}}</h2>
 </div>
+
+<a href="#" ng-click="loginCtrl.logout()">Log Out</a>

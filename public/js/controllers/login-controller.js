@@ -41,4 +41,11 @@ function($http, $scope) {
     }.bind(this));
   };
 
+//FOR TESTING ONLY
+  this.logout = function() {
+    localStorage.clear('token');
+    location.reload();
+  };
+
+
 }]); // END loginController
