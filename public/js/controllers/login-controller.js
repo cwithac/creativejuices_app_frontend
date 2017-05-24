@@ -5,6 +5,19 @@ function($http, $scope) {
 
   this.login = function(userPass) {
     console.log(userPass);
+
+    $http({
+      method: 'POST',
+      url: $scope.baseURL + 'users/login',
+      data: {
+        user: {
+          username: userPass.username,
+          password: userPass.password
+        }
+      },
+    }).then(function(response){
+      console.log(response);
+    });
   };
 
 }]); // END loginController
