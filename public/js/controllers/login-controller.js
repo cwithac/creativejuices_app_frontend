@@ -1,10 +1,14 @@
 angular.module('juicing-app').controller('loginController', ['$http', '$scope',
 function($http, $scope) {
 
-  //FOR TESTING ONLY
-  // this.test = "Testing loginController"
+//------------------------------------------------------
+//VARIABLES
+//------------------------------------------------------
   this.user = {};
 
+//------------------------------------------------------
+//LOG IN
+//------------------------------------------------------
   this.login = function(userPass) {
     console.log(userPass);
     $http({
@@ -23,29 +27,30 @@ function($http, $scope) {
     }.bind(this));
   };
 
-//FOR TESTING ONLY
-  this.getUsers = function() {
-    $http({
-      url: $scope.baseURL + 'users',
-      method: 'GET',
-      headers: {
-      'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token'))
-    }
-    }).then(function(response){
-      console.log(response);
-      if (response.data.status != 401) {
-        this.users = response.data;
-      } else {
-        this.error = "Unauthorized";
-      }
-    }.bind(this));
-  };
-
-//FOR TESTING ONLY
+//------------------------------------------------------
+//LOG OUT
+//------------------------------------------------------
   this.logout = function() {
     localStorage.clear('token');
     location.reload();
   };
 
+  //FOR TESTING ONLY
+    // this.getUsers = function() {
+    //   $http({
+    //     url: $scope.baseURL + 'users',
+    //     method: 'GET',
+    //     headers: {
+    //     'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token'))
+    //   }
+    //   }).then(function(response){
+    //     console.log(response);
+    //     if (response.data.status != 401) {
+    //       this.users = response.data;
+    //     } else {
+    //       this.error = "Unauthorized";
+    //     }
+    //   }.bind(this));
+    // };
 
 }]); // END loginController
