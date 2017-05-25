@@ -1,10 +1,8 @@
 
-var express = require('express')
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express')
+const app = express();
+const port = process.env.PORT || 8000;
 
 app.use(express.static('public'));
 
-app.listen(port, function() {
-  console.log("CreativeJuices App is listening on port: ", port);
-});
+app.listen(port, () => console.log("CreativeJuices App is listening on port: ", port));
