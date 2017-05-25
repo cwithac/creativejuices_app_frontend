@@ -6,6 +6,7 @@ function($http, $scope) {
 //------------------------------------------------------
 
   this.singleJuice = [];
+  this.formData = {};
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -32,6 +33,34 @@ function($http, $scope) {
     }).then(function(response){
       console.log('individual juice', response.data);
       this.singleJuice = response.data;
+    }.bind(this));
+  };
+
+//------------------------------------------------------
+//SHOW INDIVIDUAL JUICE ROUTE
+//------------------------------------------------------
+
+  this.addOneJuice = function() {
+    $http({
+      method: 'POST',
+      url: $scope.baseURL + 'juices',
+      headers: {
+        Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('token'))
+      },
+      data : {
+        juice: {
+          title: this.formData.title,
+          ingredients: this.formData.ingredients,
+          notes: this.formData.notes,
+          tag_type: this.formData.tag_type,
+          tag_ingredients: this.formData.tag_ingredients,
+          tag_flavor: this.formData.tag_flavor
+        }
+      }
+    }).then(function(response){
+      console.log('new juice', response);
+      this.formData = {};
+      this.getAllJuices();
     }.bind(this));
   };
 
