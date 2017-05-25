@@ -5,13 +5,15 @@ function($http, $scope) {
 //VARIABLES
 //------------------------------------------------------
   this.user = {};
-  this.message = '';
+  this.reigsterMessage = '';
+  this.loginMessage = '';
 
 //------------------------------------------------------
 //REGISTER
 //------------------------------------------------------
 
   this.register = function(registerData) {
+    this.reigsterMessage = '';
     $http({
       method: 'POST',
       url: $scope.baseURL + 'users',
@@ -23,17 +25,19 @@ function($http, $scope) {
         }
       }
     }).then(function(response){
+      this.reigsterMessage = 'Successful Registration';
       console.log('registration', response);
       registerData.display = '';
       registerData.username = '';
       registerData.password = '';
-    });
+    }.bind(this));
   };
 
 //------------------------------------------------------
 //LOG IN
 //------------------------------------------------------
   this.login = function(loginData) {
+    this.loginMessage = '';
     $http({
       method: 'POST',
       url: $scope.baseURL + 'users/login',
@@ -44,6 +48,7 @@ function($http, $scope) {
         }
       }
     }).then(function(response){
+      this.loginMessage = 'Successful Login';
       console.log('login', response);
       this.user = response.data.user;
       loginData.username = '';
