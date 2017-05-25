@@ -5,8 +5,18 @@ const app = angular.module('juicing-app', []);
 app.controller('mainController', ['$http', '$scope', function($http, $scope){
   this.title = "Creative Juices"
 
+//------------------------------------------------------
+// VARIABLES
+//------------------------------------------------------
+
   $scope.baseURL = 'http://localhost:3000/'
   // $scope.baseURL = HEROKU
+
+  $scope.juices = [];
+
+//------------------------------------------------------
+// CHECK IF A USER IS LOGGED IN
+//------------------------------------------------------
 
   $scope.userLoggedIn = false;
 
