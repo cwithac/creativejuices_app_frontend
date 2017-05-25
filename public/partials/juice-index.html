@@ -1,4 +1,4 @@
 <h2>Juice Index</h2>
 <ul>
-  <li ng-repeat="singleJuice in juices">{{singleJuice.title}}</li>
+  <li ng-repeat="singleJuice in juices" ng-click="juiceCtrl.showOneJuice(singleJuice.id)">{{singleJuice.title}}</li>
 </ul>
