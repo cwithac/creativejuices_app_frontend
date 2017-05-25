@@ -5,23 +5,49 @@ function($http, $scope) {
 //VARIABLES
 //------------------------------------------------------
   this.user = {};
+  this.message = '';
+
+//------------------------------------------------------
+//REGISTER
+//------------------------------------------------------
+
+  this.register = function(registerData) {
+    $http({
+      method: 'POST',
+      url: $scope.baseURL + 'users',
+      data: {
+        user: {
+          display: registerData.display,
+          username: registerData.username,
+          password: registerData.password
+        }
+      }
+    }).then(function(response){
+      console.log('registration', response);
+      registerData.display = '';
+      registerData.username = '';
+      registerData.password = '';
+    });
+  };
 
 //------------------------------------------------------
 //LOG IN
 //------------------------------------------------------
-  this.login = function(userPass) {
+  this.login = function(loginData) {
     $http({
       method: 'POST',
       url: $scope.baseURL + 'users/login',
       data: {
         user: {
-          username: userPass.username,
-          password: userPass.password
+          username: loginData.username,
+          password: loginData.password
         }
-      },
+      }
     }).then(function(response){
-      console.log('response', response);
+      console.log('login', response);
       this.user = response.data.user;
+      loginData.username = '';
+      loginData.password = '';
       localStorage.setItem('token', JSON.stringify(response.data.token));
     }.bind(this));
   };

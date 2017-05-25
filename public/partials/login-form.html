@@ -1,10 +1,10 @@
-<form ng-submit="loginCtrl.login(userPass)">
+<form ng-submit="loginCtrl.login(loginData)">
   <fieldset>
     <legend>Sign In</legend>
-    <label for="username">username: </label>
-      <input type="text" ng-model="userPass.username" placeholder="username" />
-    <label for="password">password: </label>
-      <input type="password" ng-model="userPass.password" placeholder="password" />
+    <label for="username">Username: </label>
+      <input type="text" ng-model="loginData.username" placeholder="username" />
+    <label for="password">Password: </label>
+      <input type="password" ng-model="loginData.password" placeholder="password" />
       <input type="submit">
   </fieldset>
 </form>
