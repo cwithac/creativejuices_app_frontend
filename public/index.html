@@ -13,6 +13,7 @@
     <script src="js/app.js"></script>
     <!-- register/login/logout-->
     <script src="js/directives/login-form.js"></script>
+    <script src="js/directives/logout-form.js"></script>
     <script src="js/directives/register-form.js"></script>
     <script src="js/controllers/login-controller.js"></script>
     <!-- CSS -->
@@ -27,12 +28,12 @@
     <nav>
       <a href="#">Register</a>
       <a href="#">Sign In</a>
-      <a href="#">Log Out</a>
+      <logout-form></logout-form>
       <a href="#">User Profile</a>
     </nav>
     <section class="userAuth">
-      <login-form></login-form>
       <register-form></register-form>
+      <login-form></login-form>
     </section>
     <div class="container">
       <section class="left">
