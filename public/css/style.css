@@ -1,9 +1,61 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: 1px dotted red;
+box-sizing: border-box;
+border: 1px dotted red;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: lightgray;
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+nav a {
+}
+
+header {
+
+}
+
+header h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.left {
+  width: 25%;
+}
+
+.center {
+  width: 25%
+}
+
+.right {
+  width: 50%
+}
+
+
+
+.occasion-tag {
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .right {
+    width: 100%
+  }
+
+  .left {
+    width: 100%;
+  }
 }

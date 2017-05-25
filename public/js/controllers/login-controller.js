@@ -10,7 +10,6 @@ function($http, $scope) {
 //LOG IN
 //------------------------------------------------------
   this.login = function(userPass) {
-    console.log(userPass);
     $http({
       method: 'POST',
       url: $scope.baseURL + 'users/login',
@@ -21,7 +20,7 @@ function($http, $scope) {
         }
       },
     }).then(function(response){
-      console.log(response);
+      console.log('response', response);
       this.user = response.data.user;
       localStorage.setItem('token', JSON.stringify(response.data.token));
     }.bind(this));
