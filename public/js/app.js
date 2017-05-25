@@ -1,11 +1,27 @@
 console.log('CreativeJuices app is connected.');
 
-var app = angular.module('juicing-app', []);
+const app = angular.module('juicing-app', []);
 
 app.controller('mainController', ['$http', '$scope', function($http, $scope){
   this.title = "Creative Juices"
 
   $scope.baseURL = 'http://localhost:3000/'
   // $scope.baseURL = HEROKU
+
+  $scope.userLoggedIn = false;
+
+  $scope.isLoggedIn = () => {
+    console.log('isLoggedIn function has been called');
+    const jwt = localStorage.getItem('token');
+    if (jwt !== 'undefined' && jwt !== undefined & jwt !== null) {
+      console.log('Yes, the user is logged in.');
+      $scope.userLoggedIn = true;
+    } else {
+      console.log('No, the user is not logged in.');
+      $scope.userLoggedIn = false;
+    }
+  }
+
+  $scope.isLoggedIn();
 
 }]); //mainController END

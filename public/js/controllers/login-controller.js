@@ -54,6 +54,7 @@ function($http, $scope) {
       loginData.username = '';
       loginData.password = '';
       localStorage.setItem('token', JSON.stringify(response.data.token));
+      $scope.isLoggedIn();
     }.bind(this));
   };
 
