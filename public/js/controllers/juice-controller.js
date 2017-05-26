@@ -92,6 +92,23 @@ function($http, $scope) {
   };
 
 //------------------------------------------------------
+//DELETE INDIVIDUAL JUICE
+//------------------------------------------------------
+
+  this.deleteOneJuice = function(juice) {
+    $http({
+      method: 'DELETE',
+      url: $scope.baseURL + 'juices/' + juice.id,
+      headers: {
+          Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('token'))
+        }
+    }).then(function(response){
+      console.log('deleted juice', response);
+      this.getAllJuices();
+    }.bind(this));
+  };
+
+//------------------------------------------------------
 // CALLS GET ALL JUICES AT WINDLOW LOAD
 //------------------------------------------------------
   this.getAllJuices();
