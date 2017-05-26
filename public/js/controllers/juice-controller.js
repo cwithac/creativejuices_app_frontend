@@ -18,7 +18,6 @@ function($http, $scope) {
       url: $scope.baseURL + 'juices',
     }).then(function(response){
       $scope.juices = response.data;
-      console.log('$scope.juices', $scope.juices);
     }.bind(this));
   };
 
@@ -61,6 +60,34 @@ function($http, $scope) {
       console.log('new juice', response);
       this.formData = {};
       this.getAllJuices();
+    }.bind(this));
+  };
+
+//------------------------------------------------------
+//EDIT INDIVIDUAL JUICE
+//------------------------------------------------------
+
+  this.editOneJuice = function(juice) {
+    $http({
+      method: 'PUT',
+      url: $scope.baseURL + 'juices/' + juice.id,
+      headers: {
+          Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('token'))
+        },
+      data: {
+        juice: {
+          title: juice.title,
+          ingredients: juice.ingredients,
+          notes: juice.notes,
+          tag_type: juice.tag_type,
+          tag_ingredients: juice.tag_ingredients,
+          tag_flavor: juice.tag_flavor
+        }
+      }
+    }).then(function(response){
+      console.log('edited juice', response);
+      this.getAllJuices();
+      this.singleJuice = "";
     }.bind(this));
   };
 
