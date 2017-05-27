@@ -66,22 +66,4 @@ function($http, $scope) {
     location.reload();
   };
 
-  //FOR TESTING ONLY
-    // this.getUsers = function() {
-    //   $http({
-    //     url: $scope.baseURL + 'users',
-    //     method: 'GET',
-    //     headers: {
-    //     'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token'))
-    //   }
-    //   }).then(function(response){
-    //     console.log(response);
-    //     if (response.data.status != 401) {
-    //       this.users = response.data;
-    //     } else {
-    //       this.error = "Unauthorized";
-    //     }
-    //   }.bind(this));
-    // };
-
 }]); // END loginController

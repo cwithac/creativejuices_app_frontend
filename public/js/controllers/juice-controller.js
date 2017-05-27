@@ -7,6 +7,7 @@ function($http, $scope) {
 
   this.singleJuice = [];
   this.formData = {};
+  this.filterBase = {};
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -36,7 +37,7 @@ function($http, $scope) {
   };
 
 //------------------------------------------------------
-//SHOW INDIVIDUAL JUICE ROUTE
+//ADD INDIVIDUAL JUICE ROUTE
 //------------------------------------------------------
 
   this.addOneJuice = function() {
@@ -107,6 +108,25 @@ function($http, $scope) {
       this.getAllJuices();
     }.bind(this));
   };
+
+//------------------------------------------------------
+// FILTERING WITHIN JUICE INDEX
+//------------------------------------------------------
+//REFERENCE: http://stackoverflow.com/questions/23983322/angularjs-checkbox-filter
+//REFERENCE: https://jsfiddle.net/ExpertSystem/wYfs4/688/
+
+  function noFilter(filterObj) {
+    return Object.keys(filterObj).every(function (key) {
+      return !filterObj[key];
+    });
+  }
+
+    this.filterJuice = function(juice) {
+      const baseFilter = this.filterBase;
+      return (baseFilter[juice.tag_ingredients] || noFilter(baseFilter))
+    }.bind(this);
+
+
 
 //------------------------------------------------------
 // CALLS GET ALL JUICES AT WINDLOW LOAD
