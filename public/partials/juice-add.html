@@ -7,20 +7,21 @@
     <textarea rows="4" cols="50" ng-model="juiceCtrl.formData.ingredients" placeholder="Ingredients"></textarea></br>
     <label for="notes">Notes: </label></br>
     <textarea rows="4" cols="50" ng-model="juiceCtrl.formData.notes" placeholder="Notes"></textarea></br>
-    <label>Kind:</label>
-    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="kind1"> Kind 1
-    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="kind2"> Kind 2
-    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="kind3"> Kind 3
+    <label>Base:</label>
+    <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Fruit"> Fruit
+    <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Veggie"> Veggie
+    <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Mixed"> Mixed
     </br>
     <label>Type:</label>
-    <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="type1"> Type 1
-    <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="type2"> Type 2
-    <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="type3"> Type 3
+    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Green"> Green
+    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Citrus"> Citrus
+    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Berry"> Berry
+    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Root"> Root
     </br>
     <label>Flavor:</label>
-    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="flavor1"> Flavor 1
-    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="flavor2"> Flavor 2
-    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="flavor3"> Flavor 3
+    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Sweet"> Sweet
+    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Mild"> Mild
+    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Spicy"> Spicy
     </br>
     <input type="submit" value="Add">
   </form>
