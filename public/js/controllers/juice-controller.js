@@ -8,6 +8,8 @@ function($http, $scope) {
   this.singleJuice = [];
   this.formData = {};
   this.filterBase = {};
+  this.filterType = {};
+  this.filterFlavor = {};
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -113,17 +115,21 @@ function($http, $scope) {
 // FILTERING WITHIN JUICE INDEX
 //------------------------------------------------------
 //REFERENCE: http://stackoverflow.com/questions/23983322/angularjs-checkbox-filter
-//REFERENCE: https://jsfiddle.net/ExpertSystem/wYfs4/688/
+//REFERENCE: https://github.com/adamsmith2012/events_app_frontend
 
   function noFilter(filterObj) {
     return Object.keys(filterObj).every(function (key) {
       return !filterObj[key];
     });
-  }
+  };
 
     this.filterJuice = function(juice) {
       const baseFilter = this.filterBase;
-      return (baseFilter[juice.tag_ingredients] || noFilter(baseFilter))
+      const typeFilter = this.filterType;
+      const flavorFilter = this.filterFlavor;
+      return (baseFilter[juice.tag_ingredients] || noFilter(baseFilter)) &&
+             (typeFilter[juice.tag_type] || noFilter(typeFilter)) &&
+             (flavorFilter[juice.tag_flavor] || noFilter(flavorFilter))
     }.bind(this);
 
 
