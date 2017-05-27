@@ -1,5 +1,5 @@
 <h2>Juice Index</h2>
-Search: <input type="text" ng-model="searchBox">
+
 <ul>
   <li ng-repeat="singleJuice in juices | filter: searchBox | orderBy: 'title'" ng-click="juiceCtrl.showOneJuice(singleJuice.id)">{{singleJuice.title}}</li>
 </ul>
