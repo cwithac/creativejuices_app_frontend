@@ -38,7 +38,21 @@ app.controller('mainController', ['$http', '$scope', function($http, $scope){
       console.log('No, the user is not logged in.');
       $scope.userLoggedIn = false;
     }
-  }
+  };
+
+  $scope.showButtons = function() {
+    const currentUser = $scope.userData.id;
+    const juiceList = $scope.juices;
+      for (var i = 0; i < juiceList.length; i++) {
+        if (currentUser === juiceList[i].user_id) {
+          juiceList[i].editButton = true;
+          juiceList[i].deleteButton = true;
+      } else {
+          juiceList[i].editButton = false;
+          juiceList[i].deleteButton = false;
+      }
+    };
+  };
 
   $scope.isLoggedIn();
 

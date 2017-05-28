@@ -10,6 +10,8 @@ function($http, $scope) {
   this.filterBase = {};
   this.filterType = {};
   this.filterFlavor = {};
+  this.editButton = false;
+  this.deleteButton = false;
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -131,8 +133,6 @@ function($http, $scope) {
              (typeFilter[juice.tag_type] || noFilter(typeFilter)) &&
              (flavorFilter[juice.tag_flavor] || noFilter(flavorFilter))
     }.bind(this);
-
-
 
 //------------------------------------------------------
 // CALLS GET ALL JUICES AT WINDLOW LOAD
