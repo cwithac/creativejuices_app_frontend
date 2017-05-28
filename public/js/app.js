@@ -40,6 +40,10 @@ app.controller('mainController', ['$http', '$scope', function($http, $scope){
     }
   };
 
+  //------------------------------------------------------
+  // SHOW EDIT AND DELETE BUTTONS DEPENDENT ON USER LOGIN/CREATION
+  //------------------------------------------------------
+
   $scope.showButtons = function() {
     const currentUser = $scope.userData.id;
     const juiceList = $scope.juices;
@@ -53,6 +57,10 @@ app.controller('mainController', ['$http', '$scope', function($http, $scope){
       }
     };
   };
+
+  //------------------------------------------------------
+  // CALLS FUNCTION AT WINDOW LOAD
+  //------------------------------------------------------
 
   $scope.isLoggedIn();
 
