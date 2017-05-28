@@ -10,10 +10,12 @@ app.controller('mainController', ['$http', '$scope', function($http, $scope){
 //------------------------------------------------------
 
   //TOGGLE FOR LOCAL/LIVE
-  // $scope.baseURL = 'http://localhost:3000/';
-  $scope.baseURL = 'https://creative-juices-api.herokuapp.com/';
+  $scope.baseURL = 'http://localhost:3000/';
+  // $scope.baseURL = 'https://creative-juices-api.herokuapp.com/';
 
   $scope.juices = [];
+
+  $scope.userData = {};
 
 //------------------------------------------------------
 // CHECK IF A USER IS LOGGED IN
@@ -23,9 +25,14 @@ app.controller('mainController', ['$http', '$scope', function($http, $scope){
 
   $scope.isLoggedIn = () => {
     console.log('isLoggedIn function has been called');
+    //Verifies a jwt user is created
     const jwt = localStorage.getItem('token');
     if (jwt !== 'undefined' && jwt !== undefined & jwt !== null) {
       console.log('Yes, the user is logged in.');
+      //Accesses user 'username' upon login
+      $scope.userData.username = JSON.parse(localStorage.getItem('username'));
+      //Accesses user 'id' upon login
+      $scope.userData.id = JSON.parse(localStorage.getItem('user_id'));
       $scope.userLoggedIn = true;
     } else {
       console.log('No, the user is not logged in.');

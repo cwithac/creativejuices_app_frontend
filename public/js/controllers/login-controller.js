@@ -53,7 +53,12 @@ function($http, $scope) {
       this.user = response.data.user;
       loginData.username = '';
       loginData.password = '';
-      localStorage.setItem('token', JSON.stringify(response.data.token));
+      //JWT
+      localStorage.setItem('token', JSON.stringify(response.data.token))
+      //Username
+      localStorage.setItem('username', JSON.stringify(response.data.user.username));
+      //User ID
+      localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
       $scope.isLoggedIn();
     }.bind(this));
   };
