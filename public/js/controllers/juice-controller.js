@@ -12,6 +12,7 @@ function($http, $scope) {
   this.filterFlavor = {};
   this.editButton = false;
   this.deleteButton = false;
+  this.userList = false;
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -133,6 +134,30 @@ function($http, $scope) {
              (typeFilter[juice.tag_type] || noFilter(typeFilter)) &&
              (flavorFilter[juice.tag_flavor] || noFilter(flavorFilter))
     }.bind(this);
+
+    $scope.userListTrue = function() {
+      const currentUser = $scope.userData.id;
+      const juiceList = $scope.juices;
+        for (var i = 0; i < juiceList.length; i++) {
+          if (currentUser === juiceList[i].user_id) {
+            juiceList[i].userList = true;
+        } else {
+            juiceList[i].userList = false;
+        }
+      };
+    };
+
+    $scope.userListFalse = function() {
+      const currentUser = $scope.userData.id;
+      const juiceList = $scope.juices;
+        for (var i = 0; i < juiceList.length; i++) {
+          if (currentUser === juiceList[i].user_id) {
+            juiceList[i].userList = false;
+        } else {
+            juiceList[i].userList = false;
+        }
+      };
+    };
 
 //------------------------------------------------------
 // CALLS GET ALL JUICES AT WINDLOW LOAD
