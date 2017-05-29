@@ -1,11 +1,8 @@
 <h2>User's Juice</h2>
-
+<button ng-click="juiceCtrl.userListFalse()">CLOSE PROFILE</button>
 <ul>
   <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)" ng-if="singleJuice.userList">
     {{singleJuice.title}}
     <button ng-if="singleJuice.editButton" type="button">EDIT</button>
-    <div ng-if="singleJuice.deleteButton" ng-click="juiceCtrl.deleteOneJuice(juiceCtrl.singleJuice)">
-      X
-    </div>
   </li>
 </ul>

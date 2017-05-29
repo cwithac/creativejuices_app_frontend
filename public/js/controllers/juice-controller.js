@@ -13,6 +13,7 @@ function($http, $scope) {
   this.editButton = false;
   this.deleteButton = false;
   this.userList = false;
+  this.userProfile = false;
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -135,9 +136,10 @@ function($http, $scope) {
              (flavorFilter[juice.tag_flavor] || noFilter(flavorFilter))
     }.bind(this);
 
-    $scope.userListTrue = function() {
+    this.userListTrue = function() {
       const currentUser = $scope.userData.id;
       const juiceList = $scope.juices;
+      this.userProfile = true;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = true;
@@ -148,9 +150,10 @@ function($http, $scope) {
       };
     };
 
-    $scope.userListFalse = function() {
+    this.userListFalse = function() {
       const currentUser = $scope.userData.id;
       const juiceList = $scope.juices;
+      this.userProfile = false;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = false;
