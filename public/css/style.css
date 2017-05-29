@@ -19,10 +19,6 @@ nav span {
     padding: 0vh 2vw;
 }
 
-header {
-
-}
-
 header h1 {
   text-align: center;
 }
@@ -42,12 +38,6 @@ header h1 {
 
 .right {
   width: 50%
-}
-
-
-
-.occasion-tag {
-  display: inline-block;
 }
 
 @media (max-width: 600px) {

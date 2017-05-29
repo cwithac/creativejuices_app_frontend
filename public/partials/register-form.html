@@ -1,5 +1,4 @@
-<div ng-if="loginCtrl.registerShow">
-  <span ng-click="loginCtrl.hideRegister()">Cancel</span>
+<span ng-click="loginCtrl.hideRegister()">Cancel</span>
   <form ng-submit="loginCtrl.register(registerData)">
     <fieldset>
       <legend>Register</legend>
@@ -12,6 +11,5 @@
       <input type="submit" class="submit">
     </fieldset>
   </form>
-</div>
 
 <span>{{loginCtrl.registerMessage}}</span>

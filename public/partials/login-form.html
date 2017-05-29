@@ -1,5 +1,4 @@
-<div ng-if="loginCtrl.loginShow">
-  <span ng-click="loginCtrl.hideLogin()">Cancel</span>
+<span ng-click="loginCtrl.hideLogin()">Cancel</span>
   <form ng-submit="loginCtrl.login(loginData)">
     <fieldset>
       <legend>Sign In</legend>
@@ -10,7 +9,5 @@
         <input type="submit">
     </fieldset>
   </form>
-</div>
 
-
-<h1>{{loginCtrl.loginMessage}}</h1>
+<span>{{loginCtrl.loginMessage}}</span>

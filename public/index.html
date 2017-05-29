@@ -42,10 +42,8 @@
     <header>
       <h1>{{ctrl.title}}</h1>
     </header>
-    <section class="userAuth">
-      <register-form></register-form>
-      <login-form></login-form>
-    </section>
+      <register-form ng-show="loginCtrl.registerShow"></register-form>
+      <login-form ng-show="loginCtrl.loginShow"></login-form>
     <div class="container">
       <section class="left">
         <aside>
