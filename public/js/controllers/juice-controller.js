@@ -16,6 +16,8 @@ function($http, $scope) {
   this.userProfile = false;
   this.addShown = false;
   this.editShown = false;
+  this.showShown = false;
+  this.showHowTo = true;
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -41,6 +43,8 @@ function($http, $scope) {
     }).then(function(response){
       console.log('individual juice', response.data);
       this.singleJuice = response.data;
+      this.showShown = true;
+      this.showHowTo = false;
     }.bind(this));
   };
 
@@ -69,6 +73,8 @@ function($http, $scope) {
       console.log('new juice', response);
       this.formData = {};
       this.addShown = false;
+      this.showShown = false;
+      this.showHowTo = true;
       this.getAllJuices();
     }.bind(this));
   };
@@ -98,6 +104,10 @@ function($http, $scope) {
       console.log('edited juice', response);
       this.getAllJuices();
       this.singleJuice = "";
+      this.editShown = false;
+      this.showShown = false;
+      this.userProfile = false;
+      this.showHowTo = true;
     }.bind(this));
   };
 
@@ -115,6 +125,10 @@ function($http, $scope) {
     }).then(function(response){
       console.log('deleted juice', response);
       this.getAllJuices();
+      this.editShown = false;
+      this.showShown = false;
+      this.userProfile = false;
+      this.showHowTo = true;
     }.bind(this));
   };
 
@@ -143,6 +157,10 @@ function($http, $scope) {
       const currentUser = $scope.userData.id;
       const juiceList = $scope.juices;
       this.userProfile = true;
+      this.addShown = false;
+      this.editShown = false;
+      this.showShown = false;
+      this.showHowTo = false;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = true;
@@ -157,6 +175,7 @@ function($http, $scope) {
       const currentUser = $scope.userData.id;
       const juiceList = $scope.juices;
       this.userProfile = false;
+      this.showHowTo = true;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = false;
@@ -167,31 +186,39 @@ function($http, $scope) {
     };
 
 //------------------------------------------------------
-// ADD/EDIT HIDE/SHOW
+// ADD/EDIT/SHOW HIDE/SHOW
 //------------------------------------------------------
 
     this.showAddForm = function() {
       this.addShown = true;
       this.editShown = false;
       this.userProfile = false;
+      this.showShown = false;
+      this.showHowTo = false;
     };
 
     this.hideAddForm = function() {
       this.addShown = false;
       this.editShown = false;
       this.userProfile = false;
+      this.showShown = false;
+      this.showHowTo = true;
     };
 
     this.showEditForm = function() {
       this.addShown = false;
-      this.editShown = true;
       this.userProfile = false;
+      this.showShown = false;
+      this.editShown = true;
+      this.showHowTo = false;
     };
 
     this.hideEditForm = function() {
       this.addShown = false;
       this.editShown = false;
       this.userProfile = false;
+      this.showShown = false;
+      this.showHowTo = true;
     };
 
 //------------------------------------------------------
