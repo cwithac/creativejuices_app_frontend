@@ -17,6 +17,8 @@
     <script src="js/directives/login-form.js"></script>
     <script src="js/directives/logout-form.js"></script>
     <script src="js/directives/register-form.js"></script>
+    <script src="js/directives/register-link.js"></script>
+    <script src="js/directives/signin-link.js"></script>
     <script src="js/controllers/login-controller.js"></script>
     <!-- juice -->
     <script src="js/directives/juice-index.js"></script>
@@ -36,10 +38,9 @@
       <h1>{{ctrl.title}}</h1>
     </header>
     <nav>
-      <a href="#">Register</a>
-      <a href="#">Sign In</a>
+      <register-link></register-link>
+      <signin-link></signin-link>
       <logout-form></logout-form>
-      <a href="#">User Profile</a>
     </nav>
     <section class="userAuth">
       <register-form></register-form>
