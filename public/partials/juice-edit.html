@@ -1,3 +1,4 @@
+<span ng-click="juiceCtrl.hideEditForm()">Cancel Edit</span>
 <fieldset>
   <legend>Edit a Juice</legend>
   <form ng-submit="juiceCtrl.editOneJuice(juiceCtrl.singleJuice)">
@@ -24,12 +25,10 @@
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Mild"> Mild
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Spicy"> Spicy
     </br>
-    <input type="submit" value="Edit">
+    <input type="submit" value="Submit Changes">
   </form>
 </fieldset>
 
 <div ng-click="juiceCtrl.deleteOneJuice(juiceCtrl.singleJuice)">
-  DELETE {{juiceCtrl.singleJuice.title}}
+  <i class="fa fa-times" aria-hidden="true">Delete {{juiceCtrl.singleJuice.title}}</i>
 </div>
-
-<span ng-click="juiceCtrl.hideEditForm()">CANCEL</span>
