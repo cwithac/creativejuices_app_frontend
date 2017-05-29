@@ -46,23 +46,17 @@
       <login-form ng-show="loginCtrl.loginShow"></login-form>
     <div class="container">
       <section class="left">
-        <aside>
           <h2>Juice Filter</h2>
           <juice-filter></juice-filter>
-        </aside>
       </section>
       <section class="center">
-        <aside>
-          <juice-user ng-show="juiceCtrl.userProfile"></juice-user>
           <juice-index></juice-index>
-        </aside>
       </section>
       <section class="right">
-        <article>
+          <juice-user ng-show="juiceCtrl.userProfile"></juice-user>
           <juice-add ng-show="juiceCtrl.addShown"></juice-add>
           <juice-edit ng-show="juiceCtrl.editShown"></juice-edit>
           <juice-show></juice-show>
-        </article>
       </section>
     </div>
   </body>
