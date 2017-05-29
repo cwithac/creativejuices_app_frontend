@@ -14,6 +14,8 @@ function($http, $scope) {
   this.deleteButton = false;
   this.userList = false;
   this.userProfile = false;
+  this.addShown = false;
+  this.editShown = false;
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -66,6 +68,7 @@ function($http, $scope) {
     }).then(function(response){
       console.log('new juice', response);
       this.formData = {};
+      this.addShown = false;
       this.getAllJuices();
     }.bind(this));
   };
@@ -161,6 +164,34 @@ function($http, $scope) {
             juiceList[i].userList = false;
         }
       };
+    };
+
+//------------------------------------------------------
+// ADD/EDIT HIDE/SHOW
+//------------------------------------------------------
+
+    this.showAddForm = function() {
+      this.addShown = true;
+      this.editShown = false;
+      this.userProfile = false;
+    };
+
+    this.hideAddForm = function() {
+      this.addShown = false;
+      this.editShown = false;
+      this.userProfile = false;
+    };
+
+    this.showEditForm = function() {
+      this.addShown = false;
+      this.editShown = true;
+      this.userProfile = false;
+    };
+
+    this.hideEditForm = function() {
+      this.addShown = false;
+      this.editShown = false;
+      this.userProfile = false;
     };
 
 //------------------------------------------------------

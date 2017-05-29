@@ -1,5 +1,7 @@
 <h2>Juice Index</h2>
 
+<span ng-click="juiceCtrl.showAddForm()">Add a Juice</span>
+
 <ul>
   <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)">
     {{singleJuice.title}}
