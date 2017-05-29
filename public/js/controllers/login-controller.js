@@ -7,6 +7,8 @@ function($http, $scope) {
   this.user = {};
   this.reigsterMessage = '';
   this.loginMessage = '';
+  this.registerShow = false;
+  this.loginShow = false;
 
 //------------------------------------------------------
 //REGISTER
@@ -25,7 +27,9 @@ function($http, $scope) {
         }
       }
     }).then(function(response){
-      this.reigsterMessage = 'Successful Registration';
+      this.reigsterMessage = 'Thank you for registering with Creative Juices.  Please sign in to continue.';
+      this.registerShow = false;
+      this.loginShow = false;
       console.log('registration', response);
       registerData.display = '';
       registerData.username = '';
@@ -60,7 +64,8 @@ function($http, $scope) {
       //User ID
       localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
       $scope.isLoggedIn();
-      // $scope.showButtons();
+      this.registerShow = false;
+      this.loginShow = false;
     }.bind(this));
   };
 
@@ -71,5 +76,26 @@ function($http, $scope) {
     localStorage.clear('token');
     location.reload();
   };
+
+//------------------------------------------------------
+//SHOW/HIDE REGISTRATION & LOGIN
+//------------------------------------------------------
+
+  this.showRegister = function() {
+    this.registerShow = true;
+  };
+
+  this.hideRegister = function() {
+    this.registerShow = false;
+  };
+
+  this.showLogin = function() {
+    this.loginShow = true;
+  };
+
+  this.hideLogin = function() {
+    this.loginShow = false;
+  };
+
 
 }]); // END loginController

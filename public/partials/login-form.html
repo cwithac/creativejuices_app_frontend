@@ -1,12 +1,16 @@
-<form ng-submit="loginCtrl.login(loginData)">
-  <fieldset>
-    <legend>Sign In</legend>
-    <label for="username">Username: </label>
-      <input type="text" ng-model="loginData.username" placeholder="username" />
-    <label for="password">Password: </label>
-      <input type="password" ng-model="loginData.password" placeholder="password" />
-      <input type="submit">
-  </fieldset>
-</form>
+<div ng-if="loginCtrl.loginShow">
+  <span ng-click="loginCtrl.hideLogin()">Cancel</span>
+  <form ng-submit="loginCtrl.login(loginData)">
+    <fieldset>
+      <legend>Sign In</legend>
+      <label for="username">Username: </label>
+        <input type="text" ng-model="loginData.username" placeholder="username" />
+      <label for="password">Password: </label>
+        <input type="password" ng-model="loginData.password" placeholder="password" />
+        <input type="submit">
+    </fieldset>
+  </form>
+</div>
+
 
 <h1>{{loginCtrl.loginMessage}}</h1>
