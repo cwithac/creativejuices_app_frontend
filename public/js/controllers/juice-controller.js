@@ -141,6 +141,7 @@ function($http, $scope) {
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = true;
+            $scope.showButtons();
         } else {
             juiceList[i].userList = false;
         }

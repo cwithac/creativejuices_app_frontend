@@ -60,7 +60,7 @@ function($http, $scope) {
       //User ID
       localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
       $scope.isLoggedIn();
-      $scope.showButtons();
+      // $scope.showButtons();
     }.bind(this));
   };
 
