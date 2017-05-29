@@ -1,6 +1,6 @@
 <span ng-click="juiceCtrl.hideEditForm()">Cancel Edit</span>
 <fieldset>
-  <legend>Edit a Juice</legend>
+  <legend>Edit {{juiceCtrl.singleJuice.title}}</legend>
   <form ng-submit="juiceCtrl.editOneJuice(juiceCtrl.singleJuice)">
     <label for="title">Title: </label>
     <input type="text" ng-model="juiceCtrl.singleJuice.title" placeholder="Title"></br>

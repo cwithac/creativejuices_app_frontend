@@ -3,6 +3,6 @@
 <ul>
   <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)" ng-if="singleJuice.userList">
     {{singleJuice.title}}
-    <button ng-if="singleJuice.editButton" type="button" ng-click="juiceCtrl.showEditForm()">EDIT</button>
+    <button ng-if="singleJuice.editButton" type="button" ng-click="juiceCtrl.showEditForm()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
   </li>
 </ul>
