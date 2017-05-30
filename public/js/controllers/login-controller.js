@@ -5,7 +5,7 @@ function($http, $scope) {
 //VARIABLES
 //------------------------------------------------------
   this.user = {};
-  this.reigsterMessage = '';
+  this.registerMessage = '';
   this.loginMessage = '';
   this.registerShow = false;
   this.loginShow = false;
@@ -27,13 +27,19 @@ function($http, $scope) {
         }
       }
     }).then(function(response){
-      this.reigsterMessage = 'Thank you for registering with Creative Juices.  Please sign in to continue.';
-      this.registerShow = false;
-      this.loginShow = false;
-      console.log('registration', response);
-      registerData.display = '';
-      registerData.username = '';
-      registerData.password = '';
+      if (response.data.status === 201) {
+        console.log('registration', response);
+        this.registerMessage = 'Thank you for registering with Creative Juices.  Please sign in to continue.';
+        this.registerShow = false;
+        this.loginShow = false;
+        registerData.display = '';
+        registerData.username = '';
+        registerData.password = '';
+      } else if (response.data.status === 422){
+        this.registerMessage = 'The username you have selected is already in use.  Please try again.'
+      } else {
+        this.registerMessage = 'The system is currently down.  Please try again later.'
+      }
     }.bind(this));
   };
 
@@ -83,6 +89,7 @@ function($http, $scope) {
 
   this.showRegister = function() {
     this.registerShow = true;
+    this.registerMessage = '';
   };
 
   this.hideRegister = function() {
