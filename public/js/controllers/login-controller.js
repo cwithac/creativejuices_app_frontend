@@ -6,7 +6,8 @@ function($http, $scope) {
 //------------------------------------------------------
   this.user = {};
   this.registerMessage = '';
-  this.loginMessage = false;
+  this.welcomeMessage = false;
+  this.loginMessage = '';
   this.registerShow = false;
   this.loginShow = false;
 
@@ -47,8 +48,9 @@ function($http, $scope) {
 //LOG IN
 //------------------------------------------------------
   this.login = function(loginData) {
-    this.loginMessage = false;
+    this.welcomeMessage = false;
     this.registerMessage = '';
+    this.loginMessage = '';
     $http({
       method: 'POST',
       url: $scope.baseURL + 'users/login',
@@ -59,20 +61,24 @@ function($http, $scope) {
         }
       }
     }).then(function(response){
-      this.loginMessage = true;
-      console.log('login', response);
-      this.user = response.data.user;
-      loginData.username = '';
-      loginData.password = '';
-      //JWT
-      localStorage.setItem('token', JSON.stringify(response.data.token))
-      //Username
-      localStorage.setItem('username', JSON.stringify(response.data.user.username));
-      //User ID
-      localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
-      $scope.isLoggedIn();
-      this.registerShow = false;
-      this.loginShow = false;
+      if (response.data.status === 200) {
+        this.welcomeMessage = true;
+        console.log('login', response);
+        this.user = response.data.user;
+        loginData.username = '';
+        loginData.password = '';
+        //JWT
+        localStorage.setItem('token', JSON.stringify(response.data.token))
+        //Username
+        localStorage.setItem('username', JSON.stringify(response.data.user.username));
+        //User ID
+        localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
+        $scope.isLoggedIn();
+        this.registerShow = false;
+        this.loginShow = false;
+      } else {
+        this.loginMessage = "Username and password combination are not recognized.  Please try again."
+      }
     }.bind(this));
   };
 
@@ -91,6 +97,7 @@ function($http, $scope) {
   this.showRegister = function() {
     this.registerShow = true;
     this.registerMessage = '';
+    this.loginMessage = '';
   };
 
   this.hideRegister = function() {
@@ -99,6 +106,8 @@ function($http, $scope) {
 
   this.showLogin = function() {
     this.loginShow = true;
+    this.registerMessage = '';
+    this.loginMessage = '';
   };
 
   this.hideLogin = function() {
