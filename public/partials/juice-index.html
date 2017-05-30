@@ -1,7 +1,5 @@
-<span ng-if="userLoggedIn" ng-click="juiceCtrl.showAddForm()"><i class="fa fa-plus" aria-hidden="true">Add a Juice</i></span>
-
 <ul>
   <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)">
-    {{singleJuice.title}}
+    <span>{{singleJuice.title}}</span>
   </li>
 </ul>

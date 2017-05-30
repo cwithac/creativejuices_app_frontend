@@ -1,13 +1,9 @@
-<i class="fa fa-cogs fa-3x" aria-hidden="true" ng-if="userLoggedIn" ng-click="juiceCtrl.userListTrue()"></i>
-
-<h3>Search:</h3>
-  <input type="text" ng-model="filterBox"></br>
+<i class="fa fa-search fa-lg" aria-hidden="true"></i><input type="text" ng-model="filterBox"></br>
 
 <h3>Base:</h3>
   <input ng-model="juiceCtrl.filterBase['Fruit']" type="checkbox" value="Fruit"/>Fruit</br>
   <input ng-model="juiceCtrl.filterBase['Veggie']" type="checkbox" value="Veggie"/>Veggie</br>
   <input ng-model="juiceCtrl.filterBase['Mixed']" type="checkbox" value="Mixed"/>Mixed
-
 
 <h3>Type:</h3>
   <input ng-model="juiceCtrl.filterType['Green']" type="checkbox" value="Green"/>Green</br>

@@ -20,6 +20,7 @@
     <script src="js/directives/register-link.js"></script>
     <script src="js/directives/login-link.js"></script>
     <script src="js/directives/messages.js"></script>
+    <script src="js/directives/dashboard-icons.js"></script>
     <script src="js/controllers/login-controller.js"></script>
     <!-- juice -->
     <script src="js/directives/juice-index.js"></script>
@@ -37,6 +38,7 @@
     <!-- FONT AWESOME -->
     <script src="https://use.fontawesome.com/f463dd1603.js"></script>
   </head>
+
   <body ng-controller="mainController as ctrl">
     <nav>
       <register-link></register-link>
@@ -57,11 +59,12 @@
           <juice-index></juice-index>
       </section>
       <section class="right">
-          <juice-user ng-show="juiceCtrl.userProfile"></juice-user>
-          <juice-add ng-show="juiceCtrl.addShown"></juice-add>
-          <juice-edit ng-show="juiceCtrl.editShown"></juice-edit>
-          <juice-show ng-show="juiceCtrl.showShown"></juice-show>
-          <app-howto ng-show="juiceCtrl.showHowTo"></app-howto>
+        <dashboard-icons></dashboard-icons>
+        <app-howto ng-show="juiceCtrl.showHowTo"></app-howto>
+        <juice-user ng-show="juiceCtrl.userProfile"></juice-user>
+        <juice-add ng-show="juiceCtrl.addShown"></juice-add>
+        <juice-edit ng-show="juiceCtrl.editShown"></juice-edit>
+        <juice-show ng-show="juiceCtrl.showShown"></juice-show>
       </section>
     </div>
   </body>

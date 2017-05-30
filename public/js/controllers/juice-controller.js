@@ -45,7 +45,7 @@ function($http, $scope) {
       console.log('individual juice', response.data);
       this.singleJuice = response.data;
       this.showShown = true;
-      this.showHowTo = false;
+      this.showHowTo = true;
     }.bind(this));
   };
 
@@ -113,8 +113,8 @@ function($http, $scope) {
       this.getAllJuices();
       this.singleJuice = "";
       this.editShown = false;
-      this.showShown = false;
-      this.userProfile = false;
+      this.showShown = true;
+      this.userProfile = true;
       this.showHowTo = true;
     }.bind(this));
   };
@@ -168,7 +168,7 @@ function($http, $scope) {
       this.addShown = false;
       this.editShown = false;
       this.showShown = false;
-      this.showHowTo = false;
+      this.showHowTo = true;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = true;
@@ -184,6 +184,7 @@ function($http, $scope) {
       const juiceList = $scope.juices;
       this.userProfile = false;
       this.showHowTo = true;
+      this.showShown = false;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = false;
@@ -208,9 +209,9 @@ function($http, $scope) {
     this.hideAddForm = function() {
       this.addShown = false;
       this.editShown = false;
-      this.userProfile = false;
-      this.showShown = false;
-      this.showHowTo = true;
+      this.userProfile = true;
+      this.showShown = true;
+      this.showHowTo = false;
     };
 
     this.showEditForm = function() {
@@ -224,9 +225,17 @@ function($http, $scope) {
     this.hideEditForm = function() {
       this.addShown = false;
       this.editShown = false;
-      this.userProfile = false;
-      this.showShown = false;
+      this.userProfile = true;
+      this.showShown = true;
+      this.showHowTo = false;
+    };
+
+    this.howToShow = function() {
       this.showHowTo = true;
+    };
+
+    this.howToHide = function() {
+      this.showHowTo = false;
     };
 
 //------------------------------------------------------
