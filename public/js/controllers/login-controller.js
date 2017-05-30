@@ -6,7 +6,7 @@ function($http, $scope) {
 //------------------------------------------------------
   this.user = {};
   this.registerMessage = '';
-  this.loginMessage = '';
+  this.loginMessage = false;
   this.registerShow = false;
   this.loginShow = false;
 
@@ -47,7 +47,8 @@ function($http, $scope) {
 //LOG IN
 //------------------------------------------------------
   this.login = function(loginData) {
-    this.loginMessage = '';
+    this.loginMessage = false;
+    this.registerMessage = '';
     $http({
       method: 'POST',
       url: $scope.baseURL + 'users/login',
@@ -58,7 +59,7 @@ function($http, $scope) {
         }
       }
     }).then(function(response){
-      this.loginMessage = 'Successful Login';
+      this.loginMessage = true;
       console.log('login', response);
       this.user = response.data.user;
       loginData.username = '';
