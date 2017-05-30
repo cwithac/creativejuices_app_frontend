@@ -26,6 +26,7 @@ header h1 {
 .container {
   display: flex;
   flex-flow: row wrap;
+  margin: 0 2vw;
 }
 
 .left {
