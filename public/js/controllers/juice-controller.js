@@ -18,6 +18,7 @@ function($http, $scope) {
   this.editShown = false;
   this.showShown = false;
   this.showHowTo = true;
+  this.addAlert = '';
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL JUICES
@@ -53,6 +54,7 @@ function($http, $scope) {
 //------------------------------------------------------
 
   this.addOneJuice = function() {
+    this.addAlert = '';
     $http({
       method: 'POST',
       url: $scope.baseURL + 'juices',
@@ -70,12 +72,18 @@ function($http, $scope) {
         }
       }
     }).then(function(response){
-      console.log('new juice', response);
-      this.formData = {};
-      this.addShown = false;
-      this.showShown = false;
-      this.showHowTo = true;
-      this.getAllJuices();
+      if (response.data.status === 201) {
+        console.log('new juice', response);
+        this.formData = {};
+        this.addShown = false;
+        this.showShown = false;
+        this.showHowTo = true;
+        this.getAllJuices();
+      } else {
+        console.log('response.data.status', response.data.status);
+        this.addAlert = 'Please check your input and try again.'
+      }
+
     }.bind(this));
   };
 
