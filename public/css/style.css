@@ -30,23 +30,16 @@ header h1 {
 }
 
 .left {
-  width: 20%;
-}
-
-.center {
-  width: 30%
+  width: 40%;
 }
 
 .right {
-  width: 50%
+  width: 60%
 }
 
 @media (max-width: 600px) {
   .left {
     width: 100%;
-  }
-  .center {
-    width: 100%
   }
   .right {
     width: 100%
