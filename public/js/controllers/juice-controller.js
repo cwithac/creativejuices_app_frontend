@@ -168,7 +168,6 @@ function($http, $scope) {
       this.addShown = false;
       this.editShown = false;
       this.showShown = false;
-      this.showHowTo = true;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = true;
@@ -183,7 +182,6 @@ function($http, $scope) {
       const currentUser = $scope.userData.id;
       const juiceList = $scope.juices;
       this.userProfile = false;
-      this.showHowTo = true;
       this.showShown = false;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
