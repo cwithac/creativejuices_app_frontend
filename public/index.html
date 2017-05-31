@@ -55,7 +55,6 @@
     </header>
       <register-form ng-show="loginCtrl.registerShow"></register-form>
       <login-form ng-show="loginCtrl.loginShow"></login-form>
-      <messages></messages>
       <section class="juice-filter">
         <juice-filter ></juice-filter>
       </section>
@@ -64,6 +63,7 @@
           <juice-index></juice-index>
       </section>
       <section class="right">
+        <messages></messages>
         <app-howto ng-show="juiceCtrl.showHowTo"></app-howto>
         <juice-user ng-show="juiceCtrl.userProfile"></juice-user>
         <juice-add ng-show="juiceCtrl.addShown"></juice-add>
