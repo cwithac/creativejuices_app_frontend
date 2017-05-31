@@ -1,31 +1,38 @@
 <i ng-click="juiceCtrl.hideAddForm()" class="fa fa-times fa-lg close-section" aria-hidden="true"></i>
-<fieldset>
-  <legend>Add a Juice</legend>
-  <form ng-submit="juiceCtrl.addOneJuice()">
-    <label for="title">Title: </label>
-    <input type="text" ng-model="juiceCtrl.formData.title" placeholder="Title" required></br>
-    <label for="ingredients">Ingredients: </label></br>
-    <textarea rows="4" cols="50" ng-model="juiceCtrl.formData.ingredients" placeholder="Ingredients" required></textarea></br>
-    <label for="notes">Notes: </label></br>
-    <textarea rows="4" cols="50" ng-model="juiceCtrl.formData.notes" placeholder="Notes" required></textarea></br>
-    <label>Base:</label>
-      <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Fruit" ng-required="!juiceCtrl.formData.tag_ingredients"> Fruit
-      <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Veggie" ng-required="!juiceCtrl.formData.tag_ingredients"> Veggie
-      <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Mixed" ng-required="!juiceCtrl.formData.tag_ingredients"> Mixed
-    </br>
-    <label>Type:</label>
-    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Green" ng-required="!juiceCtrl.formData.tag_type"> Green
-    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Citrus" ng-required="!juiceCtrl.formData.tag_type"> Citrus
-    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Berry" ng-required="!juiceCtrl.formData.tag_type"> Berry
-    <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Root" ng-required="!juiceCtrl.formData.tag_type"> Root
-    </br>
-    <label>Flavor:</label>
-    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Sweet" ng-required="!juiceCtrl.formData.tag_flavor"> Sweet
-    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Mild" ng-required="!juiceCtrl.formData.tag_flavor"> Mild
-    <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Spicy" ng-required="!juiceCtrl.formData.tag_flavor"> Spicy
-    </br>
-    <input type="submit" value="Add">
-  </form>
-</fieldset>
 
-<span>{{juiceCtrl.addAlert}}</span>
+<div class="add-form">
+  <h3 class="form-title">Add to the Database</h3>
+
+  <fieldset>
+    <form ng-submit="juiceCtrl.addOneJuice()">
+      <div class="form-group">
+        <label for="title">Title: </label>
+        <input type="text" class="form-control" ng-model="juiceCtrl.formData.title" placeholder="What do you call your juice?" required></br>
+      </div>
+
+      <label for="ingredients">Ingredients: </label></br>
+      <textarea class="form-control" rows="3" ng-model="juiceCtrl.formData.ingredients" placeholder="Please list the ingredeients and compontents of your juice." required></textarea></br>
+      <label for="notes">Notes: </label></br>
+      <textarea class="form-control" rows="3" ng-model="juiceCtrl.formData.notes" placeholder="Please add any additional instructions." required></textarea></br>
+      <label class="radio">Base:</label>
+        <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Fruit" ng-required="!juiceCtrl.formData.tag_ingredients"><span class="option"> Fruit</span>
+        <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Veggie" ng-required="!juiceCtrl.formData.tag_ingredients"><span class="option"> Veggie</span>
+        <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Mixed" ng-required="!juiceCtrl.formData.tag_ingredients"><span class="option"> Mixed</span>
+      </br>
+      <label class="radio">Type:</label>
+      <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Green" ng-required="!juiceCtrl.formData.tag_type"><span class="option">  Green</span>
+      <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Citrus" ng-required="!juiceCtrl.formData.tag_type"><span class="option">  Citrus</span>
+      <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Berry" ng-required="!juiceCtrl.formData.tag_type"><span class="option">  Berry</span>
+      <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Root" ng-required="!juiceCtrl.formData.tag_type"><span class="option">  Root</span>
+      </br>
+      <label class="radio">Flavor:</label>
+      <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Sweet" ng-required="!juiceCtrl.formData.tag_flavor"><span class="option">  Sweet</span>
+      <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Mild" ng-required="!juiceCtrl.formData.tag_flavor"><span class="option">  Mild</span>
+      <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Spicy" ng-required="!juiceCtrl.formData.tag_flavor"><span class="option">  Spicy</span>
+      </br>
+      <input class="btn btn-default add-button" type="submit" value="Add to the Database">
+    </form>
+  </fieldset>
+
+  <span>{{juiceCtrl.addAlert}}</span>
+</div>
