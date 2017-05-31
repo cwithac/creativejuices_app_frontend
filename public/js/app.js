@@ -10,8 +10,8 @@ app.controller('mainController', ['$http', '$scope', function($http, $scope){
 //------------------------------------------------------
 
   //TOGGLE FOR LOCAL/LIVE
-  $scope.baseURL = 'http://localhost:3000/';
-  // $scope.baseURL = 'https://creative-juices-api.herokuapp.com/';
+  // $scope.baseURL = 'http://localhost:3000/';
+  $scope.baseURL = 'https://creative-juices-api.herokuapp.com/';
 
   $scope.juices = [];
 
