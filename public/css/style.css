@@ -31,6 +31,7 @@ nav span {
 
 header h1 {
   text-align: center;
+  margin: 0;
 }
 
 .main-container {
@@ -40,11 +41,21 @@ header h1 {
 }
 
 .juice-filter {
-  margin: 0 2vw;
+  margin: 0 4vw;
 }
 
 .search-box {
   width: 90%;
+  margin: 0 10%;
+}
+
+.search-boxbox {
+  width: 70%;
+}
+
+.juicelist li {
+  list-style: none;
+  padding: .25vh;
 }
 
 .left {

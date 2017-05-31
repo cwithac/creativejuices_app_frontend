@@ -1,9 +1,9 @@
 
 <div class="search-box">
-    <i class="fa fa-search fa-lg" aria-hidden="true"></i><input type="text" ng-model="filterBox"></br>
+    <i class="fa fa-search fa-lg" aria-hidden="true"></i><input class="search-boxbox" type="text" ng-model="filterBox"></br>
 </div>
 
-<ul>
+<ul class="juicelist">
   <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)">
     <span>{{singleJuice.title}}</span>
   </li>
