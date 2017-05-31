@@ -1,8 +1,9 @@
+<p ng-click="juiceCtrl.userListFalse()">CLOSE <i class="fa fa-user-circle-o" aria-hidden="true"></i></p>
 <h2>Dashboard</h2>
-<span ng-click="juiceCtrl.userListFalse()">CLOSE <i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
-</br>
-<span ng-if="userLoggedIn" ng-click="juiceCtrl.showAddForm()"><i class="fa fa-plus fa-2x" aria-hidden="true">Add to the database</i></span></br>
 
+</br>
+<h3 ng-if="userLoggedIn" ng-click="juiceCtrl.showAddForm()"><i class="fa fa-plus fa-2x" aria-hidden="true">Add to the database</i></h3></br>
+<h3>My juices: </h3>
 <ul>
   <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)" ng-if="singleJuice.userList">
     <i ng-if="singleJuice.editButton" type="button" ng-click="juiceCtrl.showEditForm()" class="fa fa-pencil-square-o" aria-hidden="true"></i>
