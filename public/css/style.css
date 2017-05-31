@@ -134,7 +134,7 @@ label {
 .show-tags {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .show-title {
