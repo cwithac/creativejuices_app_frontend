@@ -5,6 +5,6 @@
 
 <ul class="juicelist">
   <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)">
-    <span>{{singleJuice.title}}</span>
+    <span><i class="fa fa-caret-left" aria-hidden="true"></i>{{singleJuice.title}}</span>
   </li>
 </ul>

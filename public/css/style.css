@@ -47,6 +47,7 @@ header h1 {
 .search-box {
   width: 90%;
   margin: 0 10%;
+  margin-bottom: 3%;
 }
 
 .search-boxbox {
@@ -58,12 +59,21 @@ header h1 {
   padding: .25vh;
 }
 
+.userjuicelist {
+  padding: 0;
+}
+
+.userjuicelist li {
+  list-style: none;
+  padding: .25vh;
+}
+
 .left {
-  width: 65%;
+  width: 60%;
 }
 
 .right {
-  width: 35%
+  width: 40%
 }
 
 .close-section {
@@ -83,5 +93,12 @@ header h1 {
     position: absolute;
     right: 5%;
     border: 1px solid black;
+  }
+  .search-box {
+    margin: 0;
+    margin-bottom: 3%;
+  }
+  ul {
+    padding: 0;
   }
 }
