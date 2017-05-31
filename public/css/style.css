@@ -23,7 +23,7 @@ header h1 {
   text-align: center;
 }
 
-.container {
+.main-container {
   display: flex;
   flex-flow: row wrap;
   margin: 0 2vw;

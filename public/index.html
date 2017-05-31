@@ -32,10 +32,13 @@
     <script src="js/directives/app-howto.js"></script>
     <script src="js/controllers/juice-controller.js"></script>
     <!-- CSS -->
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- style.css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
-    <!-- FONT AWESOME -->
+    <!-- font awesome -->
     <script src="https://use.fontawesome.com/f463dd1603.js"></script>
   </head>
 
@@ -51,7 +54,7 @@
       <register-form ng-show="loginCtrl.registerShow"></register-form>
       <login-form ng-show="loginCtrl.loginShow"></login-form>
       <messages></messages>
-    <div class="container">
+    <div class="main-container">
       <section class="left">
           <juice-filter></juice-filter>
       </section>
