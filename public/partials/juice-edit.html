@@ -1,33 +1,38 @@
 <i ng-click="juiceCtrl.hideEditForm()" class="fa fa-times fa-lg close-section" aria-hidden="true"></i>
+<div class="add-form">
 <fieldset>
   <form ng-submit="juiceCtrl.editOneJuice(juiceCtrl.singleJuice)">
+    <div class="form-group">
     <label for="title">Title: </label>
-    <input type="text" ng-model="juiceCtrl.singleJuice.title" placeholder="Title"></br>
+    <input class="form-control" type="text" ng-model="juiceCtrl.singleJuice.title"></br>
+    </div>
+
     <label for="ingredients">Ingredients: </label></br>
-    <textarea rows="4" cols="50" ng-model="juiceCtrl.singleJuice.ingredients" placeholder="Ingredients"></textarea></br>
+    <textarea class="form-control" rows="3" ng-model="juiceCtrl.singleJuice.ingredients"></textarea></br>
     <label for="notes">Notes: </label></br>
-    <textarea rows="4" cols="50" ng-model="juiceCtrl.singleJuice.notes" placeholder="Notes"></textarea></br>
-    <label>Base:</label>
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Fruit"> Fruit
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Veggie"> Veggie
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Mixed"> Mixed
+    <textarea class="form-control" rows="3"ng-model="juiceCtrl.singleJuice.notes"></textarea></br>
+    <label class="radio">Base:</label>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Fruit"><span class="option"> Fruit</span>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Veggie"><span class="option"> Veggie</span>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Mixed"><span class="option"> Mixed</span>
     </br>
-    <label>Type:</label>
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Green"> Green
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Citrus"> Citrus
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Berry"> Berry
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Root"> Root
+    <label class="radio">Type:</label>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Green"><span class="option"> Green</span>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Citrus"><span class="option"> Citrus</span>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Berry"><span class="option"> Berry</span>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Root"><span class="option"> Root</span>
     </br>
 
-    <label>Flavor:</label>
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Sweet"> Sweet
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Mild"> Mild
-    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Spicy"> Spicy
+    <label class="radio">Flavor:</label>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Sweet"><span class="option"> Sweet</span>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Mild"><span class="option"> Mild</span>
+    <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Spicy"><span class="option"> Spicy</span>
     </br>
-    <input type="submit" value="Submit Changes">
+    <input class="btn btn-default add-button" type="submit" value="Submit Changes">
   </form>
 </fieldset>
 
 <div ng-click="juiceCtrl.deleteOneJuice(juiceCtrl.singleJuice)">
-  <button type="button"><i class="fa fa-times-circle fa-lg" aria-hidden="true"></i>Delete</button>
+  <button class="btn btn-danger add-button" type="button"><i class="fa fa-times-circle fa-lg" aria-hidden="true"></i>Delete</button>
+</div>
 </div>
