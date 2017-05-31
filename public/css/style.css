@@ -59,6 +59,10 @@ header h1 {
   padding: .25vh;
 }
 
+.list-index {
+  padding-left: 1%;
+}
+
 .userjuicelist {
   padding: 0;
 }
@@ -78,8 +82,26 @@ header h1 {
 
 .close-section {
   position: absolute;
-  right: 40%;
+  right: 42%;
   border: 1px solid black;
+  cursor: pointer;
+}
+
+.how-to i {
+  padding: 0 2%;
+}
+
+#info-icon {
+  text-align: center;
+}
+
+.how-to, .full-access {
+  padding: 2vh 2vw;
+  font-size: 1.25em;
+}
+
+.full-access {
+  margin-left: 25%;
 }
 
 @media (max-width: 760px) {
