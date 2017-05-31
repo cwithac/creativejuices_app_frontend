@@ -60,15 +60,15 @@
       </section>
     <div class="main-container">
       <section class="left">
-          <juice-index></juice-index>
-      </section>
-      <section class="right">
         <messages></messages>
         <app-howto ng-show="juiceCtrl.showHowTo"></app-howto>
         <juice-user ng-show="juiceCtrl.userProfile"></juice-user>
         <juice-add ng-show="juiceCtrl.addShown"></juice-add>
         <juice-edit ng-show="juiceCtrl.editShown"></juice-edit>
-        <juice-show ng-show="juiceCtrl.showShown"></juice-show>
+        <juice-show ng-show="juiceCtrl.showShown && !juiceCtrl.editShown"></juice-show>
+      </section>
+      <section class="right">
+        <juice-index ng-show="!juiceCtrl.editShown"></juice-index>
       </section>
     </div>
   </body>

@@ -59,24 +59,29 @@ header h1 {
 }
 
 .left {
-  width: 40%;
+  width: 65%;
 }
 
 .right {
-  width: 60%
+  width: 35%
 }
 
 .close-section {
   position: absolute;
-  right: 5%;
+  right: 40%;
   border: 1px solid black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   .left {
     width: 100%;
   }
   .right {
     width: 100%
+  }
+  .close-section {
+    position: absolute;
+    right: 5%;
+    border: 1px solid black;
   }
 }
