@@ -87,15 +87,15 @@ header h1 {
   cursor: pointer;
 }
 
-.how-to i {
+.how-to i, .full-access i {
   padding: 0 2%;
 }
 
-#info-icon {
+#info-icon, #user-icon {
   text-align: center;
 }
 
-.how-to, .full-access {
+.how-to, .full-access, .user-dashboard {
   padding: 2vh 2vw;
   font-size: 1.25em;
 }
@@ -122,5 +122,8 @@ header h1 {
   }
   ul {
     padding: 0;
+  }
+  .full-access {
+    margin-left: 0;
   }
 }

@@ -1,15 +1,20 @@
 <i ng-click="juiceCtrl.userListFalse()" class="fa fa-times fa-lg close-section" aria-hidden="true"></i>
 
-<h2>Dashboard</h2>
-
+<div id="user-icon">
+  <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
+</div>
 </br>
-<h3 ng-if="userLoggedIn" ng-click="juiceCtrl.showAddForm()"><i class="fa fa-plus fa-2x" aria-hidden="true">Add to the database</i></h3></br>
-<h3>My juices: </h3>
-<ul class="userjuicelist">
-  <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)" ng-if="singleJuice.userList">
-    <i ng-if="singleJuice.editButton" type="button" ng-click="juiceCtrl.showEditForm()" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-  {{singleJuice.title}}
-  </li>
-</ul>
+<div class="user-dashboard">
+  <i ng-if="userLoggedIn" ng-click="juiceCtrl.showAddForm()" class="fa fa-plus fa-2x" aria-hidden="true"></i><strong> Add to the database</strong>
+  </br>
+  <i class="fa fa-times" aria-hidden="true"></i> Delete a juice within the edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i> dashboard
+</div>
 
-<i class="fa fa-times" aria-hidden="true">Delete a juice within the edit<i class="fa fa-pencil-square-o" aria-hidden="true"></i> dashboard.
+<div class="userjuicelist">
+  <ul>
+    <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)" ng-if="singleJuice.userList">
+      <i ng-if="singleJuice.editButton" type="button" ng-click="juiceCtrl.showEditForm()" class="fa fa-pencil-square-o" aria-hidden="true"></i> {{singleJuice.title}}
+
+    </li>
+  </ul>
+</div>
