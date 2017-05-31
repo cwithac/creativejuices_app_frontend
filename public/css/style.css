@@ -66,6 +66,12 @@ header h1 {
   width: 60%
 }
 
+.close-section {
+  position: absolute;
+  right: 5%;
+  border: 1px solid black;
+}
+
 @media (max-width: 600px) {
   .left {
     width: 100%;

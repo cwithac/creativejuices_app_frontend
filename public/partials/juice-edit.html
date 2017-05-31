@@ -1,4 +1,5 @@
-<span ng-click="juiceCtrl.hideEditForm()">Cancel Edit</span>
+<i ng-click="juiceCtrl.hideEditForm()" class="fa fa-times fa-lg close-section" aria-hidden="true"></i>
+
 <fieldset>
   <legend>Edit {{juiceCtrl.singleJuice.title}}</legend>
   <form ng-submit="juiceCtrl.editOneJuice(juiceCtrl.singleJuice)">
@@ -30,5 +31,5 @@
 </fieldset>
 
 <div ng-click="juiceCtrl.deleteOneJuice(juiceCtrl.singleJuice)">
-  <i class="fa fa-times" aria-hidden="true">Delete {{juiceCtrl.singleJuice.title}}</i>
+  <i class="fa fa-times fa-lg" aria-hidden="true">Delete {{juiceCtrl.singleJuice.title}}</i>
 </div>
