@@ -96,22 +96,26 @@ function($http, $scope) {
 
   this.showRegister = function() {
     this.registerShow = true;
+    this.loginShow = false;
     this.registerMessage = '';
     this.loginMessage = '';
   };
 
   this.hideRegister = function() {
     this.registerShow = false;
+    this.loginShow = false;
   };
 
   this.showLogin = function() {
     this.loginShow = true;
+    this.registerShow = false;
     this.registerMessage = '';
     this.loginMessage = '';
   };
 
   this.hideLogin = function() {
     this.loginShow = false;
+    this.registerShow = false;
   };
 
 
