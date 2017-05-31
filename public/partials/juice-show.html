@@ -1,8 +1,10 @@
-<h2>Juice Show</h2>
-
-<h3>Title:</h3><span>{{juiceCtrl.singleJuice.title}}</span></br>
-<h3>Ingredients:</h3><span> {{juiceCtrl.singleJuice.ingredients}}</span></br>
-<h3>Notes:</h3><span>{{juiceCtrl.singleJuice.notes}}</span></br>
-<h3>Base:</h3><span>{{juiceCtrl.singleJuice.tag_ingredients}}</span></br>
-<h3>Type:</h3><span> {{juiceCtrl.singleJuice.tag_type}}</span></br>
-<h3>Flavor:</h3><span> {{juiceCtrl.singleJuice.tag_flavor}}</span></br>
+<div class="add-form">
+  <h1 class="show-title">{{juiceCtrl.singleJuice.title}}</h3>
+  <p class="ingredients">{{juiceCtrl.singleJuice.ingredients}}</p></br>
+  <p class="notes">{{juiceCtrl.singleJuice.notes}}</p></br>
+  <div class="show-tags">
+    <span class="tagged">{{juiceCtrl.singleJuice.tag_ingredients}}</span>
+    <span class="tagged">{{juiceCtrl.singleJuice.tag_type}}</span>
+    <span class="tagged">{{juiceCtrl.singleJuice.tag_flavor}}</span>
+  </div>
+</div>
