@@ -15,6 +15,16 @@ nav {
   justify-content: flex-end;
 }
 
+dashboard-icons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+dashboard-icons i {
+  padding: 0vh 3vw;
+}
+
 nav span {
     padding: 0vh 2vw;
 }

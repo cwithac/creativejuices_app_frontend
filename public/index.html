@@ -44,10 +44,12 @@
 
   <body ng-controller="mainController as ctrl">
     <nav>
+      <dashboard-icons></dashboard-icons>
       <register-link></register-link>
       <login-link></login-link>
       <logout-form></logout-form>
     </nav>
+
     <header>
       <h1>{{ctrl.title}}</h1>
     </header>
@@ -62,7 +64,6 @@
           <juice-index></juice-index>
       </section>
       <section class="right">
-        <dashboard-icons></dashboard-icons></br>
         <app-howto ng-show="juiceCtrl.showHowTo"></app-howto>
         <juice-user ng-show="juiceCtrl.userProfile"></juice-user>
         <juice-add ng-show="juiceCtrl.addShown"></juice-add>
