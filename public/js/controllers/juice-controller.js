@@ -46,6 +46,7 @@ function($http, $scope) {
       this.singleJuice = response.data;
       this.showShown = true;
       this.showHowTo = false;
+      this.userProfile = false;
     }.bind(this));
   };
 
@@ -113,7 +114,7 @@ function($http, $scope) {
       this.getAllJuices();
       this.singleJuice = "";
       this.editShown = false;
-      this.showShown = true;
+      this.showShown = false;
       this.userProfile = true;
       this.showHowTo = false;
     }.bind(this));
@@ -168,6 +169,7 @@ function($http, $scope) {
       this.addShown = false;
       this.editShown = false;
       this.showShown = false;
+      this.showHowTo = false;
         for (var i = 0; i < juiceList.length; i++) {
           if (currentUser === juiceList[i].user_id) {
             juiceList[i].userList = true;
@@ -224,16 +226,19 @@ function($http, $scope) {
       this.addShown = false;
       this.editShown = false;
       this.userProfile = true;
-      this.showShown = true;
+      this.showShown = false;
       this.showHowTo = false;
     };
 
     this.howToShow = function() {
       this.showHowTo = true;
+      this.userProfile = false;
+      this.showShown = false;
     };
 
     this.howToHide = function() {
       this.showHowTo = false;
+      this.userProfile = false;
     };
 
 //------------------------------------------------------
