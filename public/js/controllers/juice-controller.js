@@ -78,7 +78,7 @@ function($http, $scope) {
         this.formData = {};
         this.addShown = false;
         this.showShown = false;
-        this.showHowTo = false;
+        this.showHowTo = true;
         this.getAllJuices();
       } else {
         console.log('response.data.status', response.data.status);
@@ -115,8 +115,8 @@ function($http, $scope) {
       this.singleJuice = "";
       this.editShown = false;
       this.showShown = false;
-      this.userProfile = true;
-      this.showHowTo = false;
+      this.userProfile = false;
+      this.showHowTo = true;
     }.bind(this));
   };
 
