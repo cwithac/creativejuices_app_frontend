@@ -6,7 +6,15 @@ border: 1px dotted red;
 body {
   margin: 0;
   padding: 0;
-  background-color: lightgray;
+  background: url(/images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+nav, header, .row, .left, .right {
+  background-color: white;
 }
 
 nav {
@@ -77,7 +85,8 @@ h3 {
 }
 
 .left {
-  width: 60%;
+  width: 55%;
+  margin-right: 2%
 }
 
 .right {
@@ -86,7 +95,7 @@ h3 {
 
 .close-section {
   position: absolute;
-  right: 42%;
+  right: 47%;
   border: 1px solid black;
   cursor: pointer;
 }

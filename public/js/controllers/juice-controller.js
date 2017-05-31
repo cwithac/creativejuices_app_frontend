@@ -210,7 +210,7 @@ function($http, $scope) {
       this.addShown = false;
       this.editShown = false;
       this.userProfile = true;
-      this.showShown = true;
+      this.showShown = false;
       this.showHowTo = false;
     };
 
@@ -239,6 +239,7 @@ function($http, $scope) {
     this.howToHide = function() {
       this.showHowTo = false;
       this.userProfile = false;
+      this.showShown = false;
     };
 
 //------------------------------------------------------
