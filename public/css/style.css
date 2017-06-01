@@ -36,7 +36,7 @@ dashboard-icons {
 }
 
 dashboard-icons i {
-  padding: 0vh 1vw;
+  padding: .25vh 1vw;
 }
 
 nav span {
@@ -68,12 +68,15 @@ h3 {
 }
 
 .row div {
-  padding-left: 13%;
+  padding-left: 14%;
 }
 
 .row h3 {
-  margin-left: -3%;
   padding-bottom: 5%;
+}
+
+.col-xs-4 span {
+  padding: 5%;
 }
 
 .juice-filter .middle {
@@ -87,6 +90,8 @@ h3 {
 
 .search-boxbox {
   width: 70%;
+  border: 1px solid black;
+  margin-left: 2%;
 }
 
 .juicelist li {
@@ -201,5 +206,8 @@ label {
   }
   .full-access, .add-form {
     margin-left: 0;
+  }
+  .row div {
+    padding-left: 5%;
   }
 }
