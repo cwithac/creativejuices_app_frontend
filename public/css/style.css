@@ -1,6 +1,6 @@
 * {
 box-sizing: border-box;
-border: 1px dotted red;
+border: 1px dotted gray;
 }
 
 body {
@@ -15,6 +15,10 @@ body {
 
 nav, header, .row, .left, .right {
   background-color: white;
+}
+
+.row {
+  margin: 0;
 }
 
 nav {
@@ -37,9 +41,14 @@ nav span {
     padding: 0vh 2vw;
 }
 
+header {
+  background-color: transparent;
+}
+
 header h1 {
   text-align: center;
   margin: 0;
+  color: white;
 }
 
 h3 {
@@ -49,17 +58,15 @@ h3 {
 .main-container {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 2vw;
+  margin: 0 5%;
 }
 
 .juice-filter {
-  margin: 0 4vw;
+  margin: 0 5%;
 }
 
 .search-box {
-  width: 90%;
-  margin: 0 10%;
-  margin-bottom: 3%;
+  margin: 0 6%;
 }
 
 .search-boxbox {
@@ -90,7 +97,7 @@ h3 {
 }
 
 .right {
-  width: 40%
+  width: 43%
 }
 
 .close-section {
