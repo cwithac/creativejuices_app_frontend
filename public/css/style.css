@@ -32,14 +32,14 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
 
 #login-modal-content {
   background-color: white;
-  height: 200px;
+  height: 250px;
   width: 250px;
   margin: 150px auto;
 }
 
 #register-modal-content {
   background-color: white;
-  height: 275px;
+  height: 300px;
   width: 250px;
   margin: 150px auto;
 }
