@@ -1,6 +1,6 @@
 * {
 box-sizing: border-box;
-border: 1px dotted gray;
+border: 1px dotted transparent;
 }
 
 body {
@@ -15,10 +15,12 @@ body {
 
 nav, header, .row, .left, .right {
   background-color: white;
+  opacity: .95;
 }
 
 .row {
   margin: 0;
+  padding: 1%;
 }
 
 nav {
@@ -34,7 +36,7 @@ dashboard-icons {
 }
 
 dashboard-icons i {
-  padding: 0vh 3vw;
+  padding: 0vh 1vw;
 }
 
 nav span {
@@ -63,6 +65,20 @@ h3 {
 
 .juice-filter {
   margin: 0 5%;
+}
+
+.row div {
+  padding-left: 13%;
+}
+
+.row h3 {
+  margin-left: -3%;
+  padding-bottom: 5%;
+}
+
+.juice-filter .middle {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .search-box {
@@ -105,6 +121,7 @@ h3 {
   right: 47%;
   border: 1px solid black;
   cursor: pointer;
+  margin-top: 1%;
 }
 
 .how-to i, .full-access i {
@@ -161,16 +178,18 @@ label {
   padding: 1vh 1vw;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .left {
     width: 100%;
+    margin: 0;
+    margin-bottom: 2%;
   }
   .right {
     width: 100%
   }
   .close-section {
     position: absolute;
-    right: 5%;
+    right: 7%;
     border: 1px solid black;
   }
   .search-box {
