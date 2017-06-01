@@ -8,8 +8,8 @@ function($http, $scope) {
   this.registerMessage = '';
   this.welcomeMessage = false;
   this.loginMessage = '';
-  this.registerShow = false;
-  this.loginShow = false;
+  // this.registerShow = false;
+  // this.loginShow = false;
 
 //------------------------------------------------------
 //REGISTER
@@ -31,8 +31,8 @@ function($http, $scope) {
       if (response.data.status === 201) {
         console.log('registration', response);
         this.registerMessage = 'Thank you for registering with Creative Juices.  Please sign in to continue.';
-        this.registerShow = false;
-        this.loginShow = false;
+        // this.registerShow = false;
+        // this.loginShow = false;
         registerData.display = '';
         registerData.username = '';
         registerData.password = '';
@@ -74,8 +74,8 @@ function($http, $scope) {
         //User ID
         localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
         $scope.isLoggedIn();
-        this.registerShow = false;
-        this.loginShow = false;
+        // this.registerShow = false;
+        // this.loginShow = false;
       } else {
         this.loginMessage = "Username and password combination are not recognized.  Please try again."
       }
@@ -94,29 +94,29 @@ function($http, $scope) {
 //SHOW/HIDE REGISTRATION & LOGIN
 //------------------------------------------------------
 
-  this.showRegister = function() {
-    this.registerShow = true;
-    this.loginShow = false;
-    this.registerMessage = '';
-    this.loginMessage = '';
-  };
-
-  this.hideRegister = function() {
-    this.registerShow = false;
-    this.loginShow = false;
-  };
-
-  this.showLogin = function() {
-    this.loginShow = true;
-    this.registerShow = false;
-    this.registerMessage = '';
-    this.loginMessage = '';
-  };
-
-  this.hideLogin = function() {
-    this.loginShow = false;
-    this.registerShow = false;
-  };
+  // this.showRegister = function() {
+  //   this.registerShow = true;
+  //   this.loginShow = false;
+  //   this.registerMessage = '';
+  //   this.loginMessage = '';
+  // };
+  //
+  // this.hideRegister = function() {
+  //   this.registerShow = false;
+  //   this.loginShow = false;
+  // };
+  //
+  // this.showLogin = function() {
+  //   this.loginShow = true;
+  //   this.registerShow = false;
+  //   this.registerMessage = '';
+  //   this.loginMessage = '';
+  // };
+  //
+  // this.hideLogin = function() {
+  //   this.loginShow = false;
+  //   this.registerShow = false;
+  // };
 
 
 }]); // END loginController

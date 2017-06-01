@@ -13,9 +13,13 @@ body {
   background-size: cover;
 }
 
-nav, header, .row, .left, .right {
+nav, header, .row, .left, .right, #login-modal, #register-modal {
   background-color: white;
   opacity: .95;
+}
+
+#login-modal input, #register-modal input {
+  border: 1px solid black;
 }
 
 .row {
