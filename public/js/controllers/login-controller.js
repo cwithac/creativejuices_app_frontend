@@ -29,6 +29,12 @@ function($http, $scope) {
       if (response.data.status === 201) {
         console.log('registration', response);
         this.registerMessage = 'Thank you for registering with Creative Juices.  Please sign in to continue.';
+        //saves and sends register information direct to login function
+          this.loginData = {
+            username: registerData.username,
+            password: registerData.password
+          }
+          this.login();
         registerData.display = '';
         registerData.username = '';
         registerData.password = '';
@@ -44,6 +50,8 @@ function($http, $scope) {
 //------------------------------------------------------
 //LOG IN
 //------------------------------------------------------
+//loginCtrl. needed in login-form.html to pass this.loginData through with register>login functionality.
+
   this.login = function(loginData) {
     this.welcomeMessage = false;
     this.registerMessage = '';
@@ -52,18 +60,13 @@ function($http, $scope) {
       method: 'POST',
       url: $scope.baseURL + 'users/login',
       data: {
-        user: {
-          username: loginData.username,
-          password: loginData.password
-        }
+        user: this.loginData
       }
     }).then(function(response){
       if (response.data.status === 200) {
         this.welcomeMessage = true;
         console.log('login', response);
         this.user = response.data.user;
-        loginData.username = '';
-        loginData.password = '';
         //JWT
         localStorage.setItem('token', JSON.stringify(response.data.token))
         //Username
