@@ -99,7 +99,7 @@ function($http, $scope) {
 
 const $registerModal = $('#register-modal');
 const $loginModal = $('#login-modal');
-const $registerLink = $('#register-link');
+const $registerLink = $('#register-open');
 const $loginLink = $('#login-open');
 const $registerClose = $('#register-close');
 const $loginClose = $('#login-close');
@@ -113,8 +113,19 @@ const closeLoginModal = () => {
   $loginModal.css('display', 'none');
 };
 
+const openRegisterModal = () => {
+  $registerModal.css('display', 'block');
+};
+
+const closeRegisterModal = () => {
+  $registerModal.css('display', 'none');
+};
+
 $loginLink.on('click',  openLoginModal);
 $loginClose.on('click', closeLoginModal);
+$registerLink.on('click', openRegisterModal);
+$registerClose.on('click', closeRegisterModal);
+
 
   // this.showRegister = function() {
   //   this.registerShow = true;
