@@ -8,8 +8,6 @@ function($http, $scope) {
   this.registerMessage = '';
   this.welcomeMessage = false;
   this.loginMessage = '';
-  this.registerShow = false;
-  this.loginShow = false;
 
 //------------------------------------------------------
 //REGISTER
@@ -31,11 +29,10 @@ function($http, $scope) {
       if (response.data.status === 201) {
         console.log('registration', response);
         this.registerMessage = 'Thank you for registering with Creative Juices.  Please sign in to continue.';
-        this.registerShow = false;
-        this.loginShow = false;
         registerData.display = '';
         registerData.username = '';
         registerData.password = '';
+        closeRegisterModal();
       } else if (response.data.status === 422){
         this.registerMessage = 'The username you have selected is already in use.  Please try again.'
       } else {
@@ -74,8 +71,7 @@ function($http, $scope) {
         //User ID
         localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
         $scope.isLoggedIn();
-        this.registerShow = false;
-        this.loginShow = false;
+        closeLoginModal();
       } else {
         this.loginMessage = "Username and password combination are not recognized.  Please try again."
       }
@@ -93,30 +89,40 @@ function($http, $scope) {
 //------------------------------------------------------
 //SHOW/HIDE REGISTRATION & LOGIN
 //------------------------------------------------------
+//------------------------------------------------------
+//jQuery
+//------------------------------------------------------
 
-  this.showRegister = function() {
-    this.registerShow = true;
-    this.loginShow = false;
-    this.registerMessage = '';
-    this.loginMessage = '';
-  };
+const $registerModal = $('#register-modal');
+const $loginModal = $('#login-modal');
+const $registerLink = $('#register-open');
+const $loginLink = $('#login-open');
+const $registerClose = $('#register-close');
+const $loginClose = $('#login-close');
 
-  this.hideRegister = function() {
-    this.registerShow = false;
-    this.loginShow = false;
-  };
 
-  this.showLogin = function() {
-    this.loginShow = true;
-    this.registerShow = false;
-    this.registerMessage = '';
-    this.loginMessage = '';
-  };
+const openLoginModal = () => {
+  $loginModal.css('display', 'block');
+  $registerModal.css('display', 'none');
+};
 
-  this.hideLogin = function() {
-    this.loginShow = false;
-    this.registerShow = false;
-  };
+const closeLoginModal = () => {
+  $loginModal.css('display', 'none');
+};
+
+const openRegisterModal = () => {
+  $registerModal.css('display', 'block');
+  $loginModal.css('display', 'none');
+};
+
+const closeRegisterModal = () => {
+  $registerModal.css('display', 'none');
+};
+
+$loginLink.on('click',  openLoginModal);
+$loginClose.on('click', closeLoginModal);
+$registerLink.on('click', openRegisterModal);
+$registerClose.on('click', closeRegisterModal);
 
 
 }]); // END loginController

@@ -1,15 +1,21 @@
-<span ng-click="loginCtrl.hideRegister()">Cancel</span>
-  <form ng-submit="loginCtrl.register(registerData)">
-    <fieldset>
-      <legend>Register</legend>
-      <label for="display">Display name: </label>
-      <input type="text" ng-model="registerData.display" placeholder="display name" required>
-      <label for="username">Username: </label>
-      <input type="text" ng-model="registerData.username" placeholder="username" required>
-      <label for="password">Password: </label>
-      <input type="password" ng-model="registerData.password" placeholder="password" required>
-      <input type="submit" class="submit">
-    </fieldset>
-  </form>
+<div id="register-modal">
 
-<span>{{loginCtrl.registerMessage}}</span>
+  <div id="register-modal-content">
+    <span id="register-close" ng-click="loginCtrl.hideRegister()">Cancel</span>
+      <form ng-submit="loginCtrl.register(registerData)">
+        <fieldset>
+          <legend>Register</legend>
+          <label for="display">Display name: </label>
+          <input type="text" ng-model="registerData.display" placeholder="display name" required>
+          <label for="username">Username: </label>
+          <input type="text" ng-model="registerData.username" placeholder="username" required>
+          <label for="password">Password: </label>
+          <input type="password" ng-model="registerData.password" placeholder="password" required>
+          <input type="submit" class="submit">
+        </fieldset>
+      </form>
+
+    <span>{{loginCtrl.registerMessage}}</span>
+  </div>
+
+</div>

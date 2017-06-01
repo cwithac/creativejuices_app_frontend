@@ -13,9 +13,39 @@ body {
   background-size: cover;
 }
 
-nav, header, .row, .left, .right {
+nav, header, .row, .left, .right, #login-modal, #register-modal {
   background-color: white;
   opacity: .95;
+}
+
+#login-modal, #register-modal {
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#login-modal-content {
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  margin: 150px auto;
+}
+
+#register-modal-content {
+  background-color: white;
+  height: 300px;
+  width: 250px;
+  margin: 150px auto;
+}
+
+#login-modal input, #register-modal input {
+  border: 1px solid black;
 }
 
 .row {
