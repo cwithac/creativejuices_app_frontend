@@ -93,6 +93,28 @@ function($http, $scope) {
 //------------------------------------------------------
 //SHOW/HIDE REGISTRATION & LOGIN
 //------------------------------------------------------
+//------------------------------------------------------
+//jQuery
+//------------------------------------------------------
+
+const $registerModal = $('#register-modal');
+const $loginModal = $('#login-modal');
+const $registerLink = $('#register-link');
+const $loginLink = $('#login-open');
+const $registerClose = $('#register-close');
+const $loginClose = $('#login-close');
+
+
+const openLoginModal = () => {
+  $loginModal.css('display', 'block');
+};
+
+const closeLoginModal = () => {
+  $loginModal.css('display', 'none');
+};
+
+$loginLink.on('click',  openLoginModal);
+$loginClose.on('click', closeLoginModal);
 
   // this.showRegister = function() {
   //   this.registerShow = true;
