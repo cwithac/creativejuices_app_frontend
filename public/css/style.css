@@ -31,7 +31,7 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
 }
 
 #login-modal, #register-modal {
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.75);
   position: fixed;
   top: 0;
   left: 0;
@@ -40,6 +40,7 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
   z-index: 1;
   overflow: auto;
   display: none;
+  opacity: .95;
 }
 
 #login-modal-content {
@@ -47,14 +48,19 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
   height: 250px;
   width: 250px;
   margin: 150px auto;
+  border-radius: 5px;
 }
 
 #register-modal-content {
   background-color: white;
-  height: 300px;
-  width: 250px;
+  height: 320px;
+  width: 270px;
   margin: 150px auto;
+  padding: 1%;
+  border-radius: 5px;
 }
+
+
 
 #login-modal input, #register-modal input {
   border: 1px solid #413735;
@@ -177,7 +183,6 @@ h3 {
 .close-section {
   position: absolute;
   right: 47%;
-  /*border: 1px solid #413735;*/
   cursor: pointer;
   margin-top: 1%;
 }
@@ -185,6 +190,18 @@ h3 {
 .close-section:hover {
   color: rgb(229,91,57);
 }
+
+.close-section-modal {
+  position: absolute;
+  right: 38%;
+  cursor: pointer;
+  margin-top: 1%;
+}
+
+.close-section-modal:hover {
+  color: rgb(229,91,57);
+}
+
 
 .how-to i, .full-access i {
   padding: 0 2%;
@@ -219,7 +236,11 @@ h3 {
 
 label {
   display: block;
-  width: 10%;
+  width: 100%;
+}
+
+.message {
+  color: rgb(229,91,57);
 }
 
 .option {
