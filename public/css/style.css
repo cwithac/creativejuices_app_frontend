@@ -57,6 +57,7 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+  margin: -2px;
 }
 
 dashboard-icons {
