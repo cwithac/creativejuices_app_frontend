@@ -254,14 +254,20 @@ label {
 
 .tagged-base {
   background-color: #9CAD68;
+  border-radius: 30px;
+  padding: 5px;
 }
 
 .tagged-type {
   background-color: #F9BE4E;
+  border-radius: 30px;
+  padding: 5px;
 }
 
 .tagged-flavor {
   background-color: #CD758D;
+  border-radius: 30px;
+  padding: 5px;
 }
 
 @media (max-width: 760px) {
