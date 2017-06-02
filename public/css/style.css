@@ -45,16 +45,17 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
 
 #login-modal-content {
   background-color: white;
-  height: 250px;
-  width: 250px;
+  height: 255px;
+  width: 280px;
   margin: 150px auto;
   border-radius: 5px;
+  padding: 1%;
 }
 
 #register-modal-content {
   background-color: white;
   height: 320px;
-  width: 270px;
+  width: 280px;
   margin: 150px auto;
   padding: 1%;
   border-radius: 5px;
@@ -104,6 +105,7 @@ header h1 {
   font-size: 7em;
   text-shadow: 5px 5px #413735;
   margin-bottom: -3%;
+  opacity: 1;
 }
 
 h3 {
@@ -192,8 +194,6 @@ h3 {
 }
 
 .close-section-modal {
-  position: absolute;
-  right: 38%;
   cursor: pointer;
   margin-top: 1%;
 }
@@ -300,6 +300,9 @@ label {
   header h1 {
     font-size: 4.5em;
     margin-bottom: -3%;
+  }
+  .close-section-modal {
+    right: 33%;
   }
 
 @media (max-width: 600px) {
