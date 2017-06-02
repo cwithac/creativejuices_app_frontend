@@ -21,6 +21,10 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
   opacity: .95;
 }
 
+.row, .left, .right, #login-modal, #register-modal {
+  border-radius: 5px;
+}
+
 #login-modal, #register-modal {
   background-color: rgba(0,0,0,.5);
   position: fixed;
@@ -52,7 +56,7 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
 }
 
 .row {
-  margin: 0;
+  margin: 0 15%;
   padding: 1%;
 }
 
@@ -105,7 +109,7 @@ h3 {
 }
 
 .row div {
-  padding-left: 14%;
+  padding-left: 9%;
 }
 
 .row h3 {
@@ -244,7 +248,14 @@ label {
   .full-access, .add-form {
     margin-left: 0;
   }
+  .row {
+    margin: 0;
+  }
   .row div {
     padding-left: 5%;
+  }
+  header h1 {
+    font-size: 3em;
+    margin-bottom: -9%;
   }
 }
