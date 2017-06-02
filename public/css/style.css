@@ -85,6 +85,9 @@ header h1 {
   text-align: center;
   margin: 0;
   color: white;
+  font-size: 7em;
+  text-shadow: 5px 5px black;
+  margin-bottom: -3%;
 }
 
 h3 {
