@@ -21,6 +21,10 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
   opacity: .95;
 }
 
+.row, .left, .right {
+  box-shadow: 0px 0px 5px 2px white;
+}
+
 .row, .left, .right, #login-modal, #register-modal {
   border-radius: 5px;
 }
@@ -218,6 +222,30 @@ label {
 
 .ingredients, .notes {
   padding: 1vh 1vw;
+}
+
+.tagged-head-base {
+  color: #9CAD68;
+}
+
+.tagged-head-type {
+  color: #F9BE4E;
+}
+
+.tagged-head-flavor {
+  color: #CD758D;
+}
+
+.tagged-base {
+  background-color: #9CAD68;
+}
+
+.tagged-type {
+  background-color: #F9BE4E;
+}
+
+.tagged-flavor {
+  background-color: #CD758D;
 }
 
 @media (max-width: 760px) {
