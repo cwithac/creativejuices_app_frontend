@@ -6,17 +6,20 @@
 </br>
 <div class="user-dashboard">
   <div ng-click="juiceCtrl.showAddForm()">
-    <h3><i ng-if="userLoggedIn" class="fa fa-plus fa-lg" aria-hidden="true"></i> Add to the database</h3>
+    <h3 class="hover-point"><i ng-if="userLoggedIn" class="hover-point fa fa-plus fa-lg" aria-hidden="true"></i> Add to the database</h3>
   </div>
-  </br>
-  <i class="fa fa-times" aria-hidden="true"></i> Delete a juice within the edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i> dashboard
-</div>
 
+</br>
+<h3>My collection: </h3>
 <div class="userjuicelist">
   <ul>
-    <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" ng-click="juiceCtrl.showOneJuice(singleJuice.id)" ng-if="singleJuice.userList">
-      <i ng-if="singleJuice.editButton" type="button" ng-click="juiceCtrl.showEditForm()" class="fa fa-pencil-square-o" aria-hidden="true"></i> {{singleJuice.title}}
+    <li ng-repeat="singleJuice in juices | orderBy: 'title' | filter: juiceCtrl.filterJuice | filter: filterBox" class="hover-point-point" ng-click="juiceCtrl.showOneJuice(singleJuice.id)" ng-if="singleJuice.userList">
+      <i ng-if="singleJuice.editButton" type="button" ng-click="juiceCtrl.showEditForm()" class="hover-point-bullet fa fa-pencil-square-o" aria-hidden="true"></i> {{singleJuice.title}}
 
     </li>
   </ul>
+</div>
+
+</br>
+View a juice by clicking the title.  <i class="fa fa-times" aria-hidden="true"></i> Delete or edit a juice within the <i class="fa fa-pencil-square-o" aria-hidden="true"></i> dashboard.
 </div>
