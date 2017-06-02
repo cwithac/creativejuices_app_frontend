@@ -104,6 +104,11 @@ h3 {
   margin: 0;
 }
 
+.hover-point:hover {
+  cursor: pointer;
+  color: rgb(229,91,57);
+}
+
 .main-container {
   display: flex;
   flex-flow: row wrap;
