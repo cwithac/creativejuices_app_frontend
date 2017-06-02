@@ -14,6 +14,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Chelsea Market', cursive;
+  color: #413735;
 }
 
 nav, header, .row, .left, .right, #login-modal, #register-modal {
@@ -56,7 +57,7 @@ nav, header, .row, .left, .right, #login-modal, #register-modal {
 }
 
 #login-modal input, #register-modal input {
-  border: 1px solid black;
+  border: 1px solid #413735;
 }
 
 .row {
@@ -95,7 +96,7 @@ header h1 {
   margin: 0;
   color: white;
   font-size: 7em;
-  text-shadow: 5px 5px black;
+  text-shadow: 5px 5px #413735;
   margin-bottom: -3%;
 }
 
@@ -131,7 +132,7 @@ h3 {
 
 .search-boxbox {
   width: 70%;
-  border: 1px solid black;
+  border: 1px solid #413735;
   margin-left: 2%;
 }
 
@@ -142,6 +143,12 @@ h3 {
 
 .list-index {
   padding-left: 1%;
+
+}
+
+.list-index:hover {
+  color: rgb(229,91,57);
+  cursor: pointer;
 }
 
 .userjuicelist {
@@ -165,9 +172,13 @@ h3 {
 .close-section {
   position: absolute;
   right: 47%;
-  border: 1px solid black;
+  /*border: 1px solid #413735;*/
   cursor: pointer;
   margin-top: 1%;
+}
+
+.close-section:hover {
+  color: rgb(229,91,57);
 }
 
 .how-to i, .full-access i {
@@ -271,7 +282,7 @@ label {
   .close-section {
     position: absolute;
     right: 7%;
-    border: 1px solid black;
+    border: 1px solid #413735;
   }
   .search-box {
     margin: 0;
