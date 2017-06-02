@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market');
+
 * {
 box-sizing: border-box;
 border: 1px dotted transparent;
@@ -11,6 +13,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Chelsea Market', cursive;
 }
 
 nav, header, .row, .left, .right, #login-modal, #register-modal {
