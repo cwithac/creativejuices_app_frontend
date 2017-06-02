@@ -224,6 +224,7 @@ label {
   .row {
     margin: 0 auto;
     width: 85%;
+    font-size: .8em;
   }
   header h1 {
     font-size: 4.5em;
