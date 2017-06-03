@@ -1,7 +1,7 @@
 <i ng-click="juiceCtrl.hideAddForm()" class="fa fa-times fa-lg close-section" aria-hidden="true"></i>
 
 <div class="add-form">
-  <h3 class="form-title">Add to the Database</h3>
+  <h3 class="form-title">Add to the Collection</h3>
 
   <fieldset>
     <form ng-submit="juiceCtrl.addOneJuice()">
@@ -30,7 +30,7 @@
       <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Mild" ng-required="!juiceCtrl.formData.tag_flavor"><span class="option">  Mild</span>
       <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Spicy" ng-required="!juiceCtrl.formData.tag_flavor"><span class="option">  Spicy</span>
       </br>
-      <input class="btn btn-default add-button" type="submit" value="Add to the Database">
+      <input class="btn btn-default add-button" type="submit" value="Add to the Collection">
     </form>
   </fieldset>
 

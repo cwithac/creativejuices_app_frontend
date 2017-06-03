@@ -249,10 +249,22 @@ h3 {
   text-align: center;
 }
 
-.add-button {
-  margin-bottom: 2%;
+.add-button, .del-button {
+  margin-top: 5%;
   display: inline-block;
   float: right;
+}
+
+.add-button {
+  background-color: rgba(229,91,57, .5);
+}
+
+.del-button {
+  margin-top: 1%;
+}
+
+.add-button:hover {
+    background-color: rgba(229,91,57, .5);
 }
 
 label {
