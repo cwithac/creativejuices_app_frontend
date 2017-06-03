@@ -223,10 +223,12 @@ h3 {
 .how-to, .full-access, .user-dashboard {
   padding: 2vh 2vw;
   font-size: 1.25em;
+  margin-top: -5%;
 }
 
 .full-access {
   margin-left: 25%;
+  margin-top: -5%;
 }
 
 .add-form {
