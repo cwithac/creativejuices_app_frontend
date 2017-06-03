@@ -234,12 +234,16 @@ function($http, $scope) {
       this.showHowTo = true;
       this.userProfile = false;
       this.showShown = false;
+      this.addShown = false;
+      this.editShown = false;
     };
 
     this.howToHide = function() {
       this.showHowTo = false;
       this.userProfile = false;
       this.showShown = false;
+      this.addShown = false;
+      this.editShown = false;
     };
 
 //------------------------------------------------------
