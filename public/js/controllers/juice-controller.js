@@ -42,7 +42,7 @@ function($http, $scope) {
       method: 'GET',
       url: $scope.baseURL + 'juices/' + juiceID,
     }).then(function(response){
-      console.log('individual juice', response.data);
+      // console.log('individual juice', response.data);
       this.singleJuice = response.data;
       this.showShown = true;
       this.showHowTo = false;
@@ -74,14 +74,14 @@ function($http, $scope) {
       }
     }).then(function(response){
       if (response.data.status === 201) {
-        console.log('new juice', response);
+        // console.log('new juice', response);
         this.formData = {};
         this.addShown = false;
         this.showShown = false;
         this.showHowTo = true;
         this.getAllJuices();
       } else {
-        console.log('response.data.status', response.data.status);
+        // console.log('response.data.status', response.data.status);
         this.addAlert = 'Please check your input and try again.'
       }
 
@@ -110,7 +110,7 @@ function($http, $scope) {
         }
       }
     }).then(function(response){
-      console.log('edited juice', response);
+      // console.log('edited juice', response);
       this.getAllJuices();
       this.singleJuice = "";
       this.editShown = false;
@@ -132,7 +132,7 @@ function($http, $scope) {
           Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('token'))
         }
     }).then(function(response){
-      console.log('deleted juice', response);
+      // console.log('deleted juice', response);
       this.getAllJuices();
       this.editShown = false;
       this.showShown = false;

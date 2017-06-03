@@ -27,7 +27,7 @@ function($http, $scope) {
       }
     }).then(function(response){
       if (response.data.status === 201) {
-        console.log('registration', response);
+        // console.log('registration', response);
         this.registerMessage = 'Thank you for registering with Creative Juices.  Please sign in to continue.';
         //saves and sends register information direct to login function
           this.loginData = {
@@ -65,7 +65,7 @@ function($http, $scope) {
     }).then(function(response){
       if (response.data.status === 200) {
         this.welcomeMessage = true;
-        console.log('login', response);
+        // console.log('login', response);
         this.user = response.data.user;
         //JWT
         localStorage.setItem('token', JSON.stringify(response.data.token))

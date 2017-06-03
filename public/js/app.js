@@ -1,4 +1,4 @@
-console.log('CreativeJuices app is connected.');
+// console.log('CreativeJuices app is connected.');
 
 const app = angular.module('juicing-app', []);
 
@@ -24,18 +24,18 @@ app.controller('mainController', ['$http', '$scope', function($http, $scope){
   $scope.userLoggedIn = false;
 
   $scope.isLoggedIn = () => {
-    console.log('isLoggedIn function has been called');
+    // console.log('isLoggedIn function has been called');
     //Verifies a jwt user is created
     const jwt = localStorage.getItem('token');
     if (jwt !== 'undefined' && jwt !== undefined & jwt !== null) {
-      console.log('Yes, the user is logged in.');
+      // console.log('Yes, the user is logged in.');
       //Accesses user 'username' upon login
       $scope.userData.username = JSON.parse(localStorage.getItem('username'));
       //Accesses user 'id' upon login
       $scope.userData.id = JSON.parse(localStorage.getItem('user_id'));
       $scope.userLoggedIn = true;
     } else {
-      console.log('No, the user is not logged in.');
+      // console.log('No, the user is not logged in.');
       $scope.userLoggedIn = false;
     }
   };
