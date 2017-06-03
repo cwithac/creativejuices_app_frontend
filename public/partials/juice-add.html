@@ -11,21 +11,21 @@
       </div>
 
       <label for="ingredients">Ingredients: </label></br>
-      <textarea class="form-control" rows="3" ng-model="juiceCtrl.formData.ingredients" placeholder="Please list the ingredeients and compontents of your juice." required></textarea></br>
+      <textarea class="form-control" rows="3" ng-model="juiceCtrl.formData.ingredients" placeholder="  Please list the ingredeients of your juice." required></textarea></br>
       <label for="notes">Notes: </label></br>
-      <textarea class="form-control" rows="3" ng-model="juiceCtrl.formData.notes" placeholder="Please add any additional instructions." required></textarea></br>
-      <label class="radio">Base:</label>
+      <textarea class="form-control" rows="3" ng-model="juiceCtrl.formData.notes" placeholder="  Please add any additional instructions." required></textarea></br>
+      <label class="radio"><span class="tagged-head-base">Base:</span></label>
         <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Fruit" ng-required="!juiceCtrl.formData.tag_ingredients"><span class="option"> Fruit</span>
         <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Veggie" ng-required="!juiceCtrl.formData.tag_ingredients"><span class="option"> Veggie</span>
         <input type="radio" ng-model="juiceCtrl.formData.tag_ingredients" value="Mixed" ng-required="!juiceCtrl.formData.tag_ingredients"><span class="option"> Mixed</span>
       </br>
-      <label class="radio">Type:</label>
+      <label class="radio"><span class="tagged-head-type">Type:</span></label>
       <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Green" ng-required="!juiceCtrl.formData.tag_type"><span class="option">  Green</span>
       <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Citrus" ng-required="!juiceCtrl.formData.tag_type"><span class="option">  Citrus</span>
       <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Berry" ng-required="!juiceCtrl.formData.tag_type"><span class="option">  Berry</span>
       <input type="radio" ng-model="juiceCtrl.formData.tag_type" value="Root" ng-required="!juiceCtrl.formData.tag_type"><span class="option">  Root</span>
       </br>
-      <label class="radio">Flavor:</label>
+      <label class="radio"><span class="tagged-head-flavor">Flavor:</span></label>
       <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Sweet" ng-required="!juiceCtrl.formData.tag_flavor"><span class="option">  Sweet</span>
       <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Mild" ng-required="!juiceCtrl.formData.tag_flavor"><span class="option">  Mild</span>
       <input type="radio" ng-model="juiceCtrl.formData.tag_flavor" value="Spicy" ng-required="!juiceCtrl.formData.tag_flavor"><span class="option">  Spicy</span>

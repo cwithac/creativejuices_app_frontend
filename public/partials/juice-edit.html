@@ -11,19 +11,19 @@
     <textarea class="form-control" rows="3" ng-model="juiceCtrl.singleJuice.ingredients"></textarea></br>
     <label for="notes">Notes: </label></br>
     <textarea class="form-control" rows="3"ng-model="juiceCtrl.singleJuice.notes"></textarea></br>
-    <label class="radio">Base:</label>
+    <label class="radio"><span class="tagged-head-base">Base:</span></label>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Fruit"><span class="option"> Fruit</span>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Veggie"><span class="option"> Veggie</span>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_ingredients" value="Mixed"><span class="option"> Mixed</span>
     </br>
-    <label class="radio">Type:</label>
+    <label class="radio"><span class="tagged-head-type">Type:</span></label>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Green"><span class="option"> Green</span>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Citrus"><span class="option"> Citrus</span>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Berry"><span class="option"> Berry</span>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_type" value="Root"><span class="option"> Root</span>
     </br>
 
-    <label class="radio">Flavor:</label>
+    <label class="radio"><span class="tagged-head-flavor">Flavor:</span></label>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Sweet"><span class="option"> Sweet</span>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Mild"><span class="option"> Mild</span>
     <input type="radio" ng-model="juiceCtrl.singleJuice.tag_flavor" value="Spicy"><span class="option"> Spicy</span>
@@ -33,6 +33,6 @@
 </fieldset>
 
 <div ng-click="juiceCtrl.deleteOneJuice(juiceCtrl.singleJuice)">
-  <button class="btn btn-danger add-button" type="button"><i class="fa fa-times-circle fa-lg" aria-hidden="true"></i>Delete</button>
+  <button class="btn btn-danger add-button" type="button"><i class="fa fa-times-circle fa-lg" aria-hidden="true"></i> Permanently Delete</button>
 </div>
 </div>
